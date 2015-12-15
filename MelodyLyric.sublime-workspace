@@ -1,0 +1,483 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"p",
+				"password"
+			],
+			[
+				"re",
+				"remember"
+			],
+			[
+				"lo",
+				"localStorage"
+			],
+			[
+				"su",
+				"submit"
+			],
+			[
+				"di",
+				"disc"
+			],
+			[
+				"content",
+				"content"
+			],
+			[
+				"conte",
+				"content_1"
+			],
+			[
+				"cont",
+				"content	@content"
+			],
+			[
+				"con",
+				"content	@content"
+			],
+			[
+				"st",
+				"stylesheet_link_tag"
+			],
+			[
+				"tr",
+				"Transportation"
+			],
+			[
+				"A",
+				"Apartments"
+			],
+			[
+				"ap",
+				"apartment"
+			],
+			[
+				"T",
+				"Transportation"
+			],
+			[
+				"par",
+				"partial"
+			],
+			[
+				"head",
+				"header"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 286.0,
+		"last_filter": "sass",
+		"selected_items":
+		[
+			[
+				"sass",
+				"Set Syntax: SASS"
+			],
+			[
+				"coff",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"ha",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"ruby ha",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"ruby ",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"livere",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"liver",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Emmet: Remove Tag"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"git s",
+				"Git: Status"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"git pus",
+				"Git: Push"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
+			[
+				"git ad",
+				"Git: Add..."
+			],
+			[
+				"git com",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"gitad",
+				"Git: Add..."
+			],
+			[
+				"c",
+				"CodeFormatter: Format as CSS Syntax"
+			],
+			[
+				"code",
+				"CodeFormatter: Format as CSS Syntax"
+			],
+			[
+				"IN",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				":",
+				":$ - EOF"
+			],
+			[
+				"",
+				":0 - BOF"
+			],
+			[
+				"l",
+				"LiveReload: Self test"
+			],
+			[
+				"live",
+				"Package Control: Advanced Install Package"
+			],
+			[
+				"enable",
+				"Package Control: Disable Package"
+			],
+			[
+				"pakc",
+				"Package Control: List Packages"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 457.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"ls",
+			">>>",
+			"git",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/index.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/config.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/assets/css/main.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/partials/login.haml",
+		"/Volumes/DataHD/Users/WayneHuang/Library/Mobile Documents/com~apple~CloudDocs/Course/Database/HW#2/7.sql",
+		"/Volumes/DataHD/Users/WayneHuang/Library/Mobile Documents/com~apple~CloudDocs/Course/Database/HW#2/8.sql",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/build/index.html",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/build/about.html",
+		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/about.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/config.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/layouts/layout.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/footer.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/partial/footer.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/tour.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header-fixed.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index/header.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/all.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/about.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/apartment.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/js/tinymap.min.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/tour.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/opt/css/tour.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/about.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/opt/css/about.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/lib.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/opt/css/index.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index/weather.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/layouts/layout.erb.bak",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header-fixed.html",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/Gemfile",
+		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/index.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/index.html.erb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header.haml",
+		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Volumes/DataHD/Users/WayneHuang/Sites/db_scenarioB/index.php",
+		"/Volumes/DataHD/Users/WayneHuang/Sites/db_scenarioB/DB_config.php",
+		"/Volumes/Data HD/Users/WayneHuang/Sites/db_scenarioB/DB_Class.php",
+		"/Volumes/Data HD/Users/WayneHuang/Sites/db_scenarioB/DB_Class_5.5.php",
+		"/Volumes/Data HD/Users/WayneHuang/Downloads/info.php",
+		"/Volumes/Data HD/Users/WayneHuang/Sites/db_scenarioB/DB_config.php",
+		"/usr/local/php5-5.6.14-20151002-085853/php.d/99-liip-developer.ini",
+		"/Volumes/Data HD/Users/WayneHuang/Sites/owncloud/config/config.php",
+		"/usr/local/etc/php/5.5/conf.d/ext-apcu.ini",
+		"/usr/local/etc/php/5.5/php.ini",
+		"/Volumes/Data HD/Users/WayneHuang/Sites/phpinfo.php",
+		"/Volumes/Data HD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"<current file>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			".googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"}\n    :javascript\n      window.jQuery || document.write('<script src=\"library/js/vendor/jquery-2.1.1.js\"><\\/script>')\n    = javascript_include_tag \"libs/jquery.mobile-1.4.5.min.js\"\n    = javascript_include_tag \"main\"\n\n    = yield_content :script",
+			" ",
+			"w",
+			"\\p",
+			"?-\\p{Lu}",
+			"\\p{Lu}",
+			"\\p{測}",
+			"\\p{IsCJKUnifiedIdeographs}",
+			"\\r\\n",
+			"\\r",
+			"^.*$",
+			"^.?$",
+			".",
+			"8{3}",
+			"^\\t+",
+			"^\\t+$",
+			"^[\\t]+$",
+			"[a-z]+$",
+			"[a-z]+",
+			"^[a-z]+$",
+			"\\bp",
+			"s\\b",
+			"s\\bi",
+			"../",
+			"30px",
+			";",
+			"{",
+			"}\n",
+			"%\n",
+			"	});",
+			";",
+			"{",
+			"r",
+			"{",
+			"}\n",
+			";",
+			"{",
+			";",
+			"}\n",
+			"{",
+			";",
+			"}\n",
+			"{",
+			"\n",
+			";",
+			"}",
+			"{",
+			";",
+			"%",
+			"Apartments",
+			"compass",
+			"haml",
+			"Brogrammer"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			" ",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.5,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 98.0
+	},
+	"pinned_build_system": "",
+	"project": "MelodyLyric.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 1,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 1
+	}
+}

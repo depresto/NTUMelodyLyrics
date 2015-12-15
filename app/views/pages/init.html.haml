@@ -1,0 +1,19 @@
+- title '首頁'
+/- description ''
+
+%div#index_main{:role => "main", :class => "ui-content"} 
+	#bg
+	
+- content_for :script do
+	:coffeescript
+		$ ->
+			if localStorage._remember?
+				console.log localStorage._remember
+				$.ajax {
+					#url:
+					}
+				return
+			else
+				$.mobile.changePage 'login.html', { transition: "fade"}
+				# $(location).attr 'href','login.html'
+				return
