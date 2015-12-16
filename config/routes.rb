@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get '/', to: 'pages#init'
-  get 'home', to: 'pages#init'
-  get 'init', to: 'pages#init'
+  root 'pages#init'
 
-  get 'login', to: 'pages#login'
+  get '/init'   => 'pages#init',    :as => 'init'
+  get '/login'  => 'pages#login',   :as => 'login'
+  get '/main'   => 'pages#main',    :as => 'main'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
