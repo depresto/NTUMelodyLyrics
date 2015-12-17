@@ -16,8 +16,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem "haml-rails", "~> 0.9"
-# Use Haml
+gem "slim-rails"
+# Use Slim
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -49,7 +49,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-  # Use sqlite3 as the database for Active Record
+
   gem 'sqlite3'
 
   # gem 'guard'
@@ -62,4 +62,6 @@ end
 
 group :production do
   gem 'pg'
+
+  gem 'rails_12factor'
 end
