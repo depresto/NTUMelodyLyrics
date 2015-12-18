@@ -1,0 +1,19 @@
+- title '首頁'
+/!- description ''
+
+div#index_main role="main" class="ui-content" 
+	#bg
+	
+- content_for :script do
+	coffee:
+		$ ->
+			if localStorage._remember?
+				console.log localStorage._remember
+				console.log 
+				$.ajax {
+					#url:
+					}
+				return
+			else
+				$.mobile.changePage Routes.login_path(), { transition: "fade"}
+				return

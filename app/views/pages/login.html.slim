@@ -1,0 +1,41 @@
+- title '登入'
+/!- description ''
+
+div data-role="header" class="header" 
+	h1 詞曲創作社
+
+div#login_main role="main" class="ui-content" 
+	h3 登入
+	label for="username"  學號
+	input#username type="text" name="username" /
+	
+	label for="password"  密碼
+	input#password type="password" name="password" /
+
+	fieldset
+		input#remember type="checkbox" name="remember" /
+		label for="remember"  記住我
+
+	a#submit.ui-btn.ui-btn-b.ui-corner-all href="#"  登入
+
+	p
+
+- content_for :script do
+	coffee:
+		$('#submit').on 'click' , (e) ->
+			username = $('#username').val()
+			password = $('#password').val()
+			remember = $('#remember').val()
+			console.log 'submit'
+
+			if $('#remember').is ':checked'
+				localStorage._username = username
+				localStorage._password = password
+				localStorage._remember = remember
+				console.log 'rememberred!'
+				return
+			else
+				localStorage._username = ''
+				localStorage._password = ''
+				localStorage._remember = ''
+				return
