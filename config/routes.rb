@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/login'  => 'pages#login',   :as => 'login'
   get '/main'   => 'pages#main',    :as => 'main'
 
+  resources :user, path: '/login/user'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
