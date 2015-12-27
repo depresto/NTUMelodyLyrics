@@ -10,7 +10,27 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require jquery.mobile
+ *= require custom.min
+ *= require jquery.mobile.icons.min
+ *= require font-awesome
  *= require_tree .
  *= require_self
- *= require jquery.mobile
  */
+.header
+	background-image: image-url('title-texture.jpg')
+	background-size: contain
+	height: auto
+	text-align: center
+	img
+		width: 100%
+		max-width: 200px
+.ui-header .ui-btn, .ui-header .ui-icon, .ui-header .ui-btn-inner
+	margin-top: 15px
+.main
+	h3
+		text-align: center
+	#error_message
+		text-align: center
+		b
+			color: red

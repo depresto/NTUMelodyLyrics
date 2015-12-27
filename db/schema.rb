@@ -11,15 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151218085059) do
+ActiveRecord::Schema.define(version: 20151226162249) do
+
+  create_table "login_token", force: :cascade do |t|
+    t.string "s_id"
+    t.string "token"
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string   "s_id"
-    t.string   "name"
-    t.string   "password_salt"
-    t.string   "password_hash"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.string   "s_id",                          null: false
+    t.string   "name",                          null: false
+    t.string   "password_salt",                 null: false
+    t.string   "password_hash",                 null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.boolean  "rememberred",   default: false, null: false
+    t.boolean  "isadmin",       default: false, null: false
   end
 
 end

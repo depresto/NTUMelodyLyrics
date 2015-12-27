@@ -1,0 +1,43 @@
+- title '新增使用者'
+
+= bg_helper
+
+div#adduser_main role="main" class="ui-content" 
+	h3 新增使用者
+
+	= form_for(User.new, remote: true, :html => { :id => 'adduser_form'}) do |f|
+		= f.label :name, '姓名'
+		= f.text_field :name, :require => true
+		= f.label :username, '學號'
+		= f.text_field :username, :require => true, :pattern => '^([a-z]|[A-Z])(\d{2})(\d|[a-e]|[A-E])\d{5}$'
+		= f.label :password, '密碼'
+		= f.password_field :password, :require => true
+		br
+		= f.submit '註冊'
+		br
+		p#error_message
+			b
+
+- content_for :script do
+	coffee:
+		$('#adduser_form').on('ajax:success' , (e, data, status, xhr) ->
+			console.log data
+			if (data.success)
+				$('#error_message').text()
+			else
+				$('#error_message').text(data.msg)
+				
+		).on 'ajax:error' , (e, xhr, status, error) ->
+			console.error status+' : '+xhr.responseJSON.msg
+			$('#error_message b').text(xhr.responseJSON.msg)
+	javascript:
+		$(document).ready(function() {
+			var form = document.getElementById('adduser_form');
+			form.noValidate = true;
+			form.addEventListener('submit', function(event) { // listen for form submitting
+				if (!event.target.checkValidity()) {
+					event.preventDefault(); // dismiss the default functionality
+					alert('Please, fill the form'); // error message
+				}
+			}, false);
+		});

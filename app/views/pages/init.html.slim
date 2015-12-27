@@ -7,12 +7,21 @@ div#index_main role="main" class="ui-content"
 - content_for :script do
 	coffee:
 		$ ->
-			if localStorage._remember?
-				console.log localStorage._remember
-				console.log 
-				$.ajax {
-					#url:
-					}
+			if localStorage._login_token
+				console.log localStorage._login_token
+				$.ajax
+					type: 'POST',
+					url: Routes.token_path(),
+					data: {login_token: localStorage._login_token},
+					success: (response) ->
+						console.log response
+						if (response.success)
+							$.mobile.changePage response.redirect, { transition: "fade"}
+						else
+							$.mobile.changePage Routes.login_path(), { transition: "fade"}
+					,
+					error: (xhr) ->
+						console.log xhr
 				return
 			else
 				$.mobile.changePage Routes.login_path(), { transition: "fade"}

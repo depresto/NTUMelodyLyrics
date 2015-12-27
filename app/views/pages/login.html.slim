@@ -1,41 +1,43 @@
 - title '登入'
 /!- description ''
 
-div data-role="header" class="header" 
-	h1 詞曲創作社
+= bg_header
 
 div#login_main role="main" class="ui-content" 
 	h3 登入
-	label for="username"  學號
-	input#username type="text" name="username" /
-	
-	label for="password"  密碼
-	input#password type="password" name="password" /
 
-	fieldset
-		input#remember type="checkbox" name="remember" /
-		label for="remember"  記住我
+	= form_tag( session_path, remote: true, id: 'login_form')
+		label for="username"  學號
+		input#username type="text" name="username" /
+		
+		label for="password"  密碼
+		input#password type="password" name="password" /
 
-	a#submit.ui-btn.ui-btn-b.ui-corner-all href="#"  登入
+		fieldset
+			input#remember type="checkbox" name="remember" /
+			label for="remember"  記住我
 
-	p
+		input#submit.ui-btn.ui-btn-b.ui-corner-all type="submit" value="登入" /
+		
+		br
+
+		p#error_message
+			b
 
 - content_for :script do
 	coffee:
-		$('#submit').on 'click' , (e) ->
-			username = $('#username').val()
-			password = $('#password').val()
-			remember = $('#remember').val()
-			console.log 'submit'
+		$('#login_form').on('ajax:success' , (e, data, status, xhr) ->
+			console.log data
+			if (data.success)
+				$('#error_message b').text('')
+				
+				localStorage._login_token = data.login_token if (data.login_token)
 
-			if $('#remember').is ':checked'
-				localStorage._username = username
-				localStorage._password = password
-				localStorage._remember = remember
-				console.log 'rememberred!'
-				return
+				$.mobile.changePage data.redirect, { transition: "fade"}
+				console.log 'test'
 			else
-				localStorage._username = ''
-				localStorage._password = ''
-				localStorage._remember = ''
-				return
+				$('#error_message b').text(data.msg)
+
+		).on 'ajax:error' , (e, xhr, status, error) ->
+			console.error status+' : '+xhr.responseJSON.msg
+			$('#error_message b').text(xhr.responseJSON.msg)

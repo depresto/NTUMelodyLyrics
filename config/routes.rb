@@ -4,9 +4,14 @@ Rails.application.routes.draw do
   get '/init'   => 'pages#init',    :as => 'init'
   get '/login'  => 'pages#login',   :as => 'login'
   get '/main'   => 'pages#main',    :as => 'main'
+  # Same as:
+  # get :init, :login, :main, controller: :pages
+  get '/admin/adduser' => 'admin#adduser'
 
-  resources :user, path: '/login/user'
+  resources :users, only: [:create, :show], path: '/login/user'
 
+  resource :session, only: [:create, :destroy]
+  post '/login/token' => 'sessions#token',  :as => 'token'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
