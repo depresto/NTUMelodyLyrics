@@ -36,7 +36,8 @@ div#login_main role="main" class="ui-content"
 				$.mobile.changePage data.redirect, { transition: "fade"}
 				console.log 'test'
 			else
-				$('#error_message b').text(data.msg).css('color','red')
+				$('#error_message b').text(data.msg)
+
 		).on 'ajax:error' , (e, xhr, status, error) ->
 			console.error status+' : '+xhr.responseJSON.msg
 			$('#error_message b').text(xhr.responseJSON.msg)

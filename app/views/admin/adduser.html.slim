@@ -23,9 +23,9 @@ div#adduser_main role="main" class="ui-content"
 		$('#adduser_form').on('ajax:success' , (e, data, status, xhr) ->
 			console.log data
 			if (data.success)
-				$('#error_message b').text(data.msg).css('color','blue')
+				$('#error_message').text()
 			else
-				$('#error_message b').text(data.msg).css('color','red')
+				$('#error_message').text(data.msg)
 				
 		).on 'ajax:error' , (e, xhr, status, error) ->
 			console.error status+' : '+xhr.responseJSON.msg

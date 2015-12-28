@@ -7,10 +7,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       logger.debug "Signup success"
-      return render :json => {:success => true, :msg => ["註冊成功！"]}
+      return render :json => {:success => true}
     else
       logger.debug "Signup error"
-      return render :json => {:success => false, :msg => ["註冊失敗"]}
+      return render :status => 400, :json => {:msg => ["Signup failed."]}
     end
   end
 
