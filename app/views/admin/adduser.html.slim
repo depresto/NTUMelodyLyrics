@@ -23,7 +23,7 @@ div#adduser_main role="main" class="ui-content"
 		$('#adduser_form').on('ajax:success' , (e, data, status, xhr) ->
 			console.log data
 			if (data.success)
-				$('#error_message').text()
+				$('#error_message').text(data.msg)
 			else
 				$('#error_message').text(data.msg)
 				
