@@ -12,6 +12,10 @@ class User < ActiveRecord::Base
 	end
 
 	def self.authenticate(username, password, rememberred)
+		if (username.nil?)||(password.nil?)
+			nil
+		end
+
 		sql = "SELECT s_id, name, password_hash, password_salt, rememberred FROM users WHERE s_id = '#{username}';"
 		#sql = "SELECT * FROM users"
 		user = ActiveRecord::Base.connection.execute(sql)[0]
