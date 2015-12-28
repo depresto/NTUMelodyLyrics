@@ -2,8 +2,9 @@
 /!- description ''
 
 div#index_main role="main" class="ui-content" 
-	.bg-wrap
-		=image_tag('bg.jpg', :id => 'bg')
+	.bg-content
+		.bg-wrap
+			=image_tag('bg.jpg', :id => 'bg')
 	
 - content_for :script do
 	coffee:
