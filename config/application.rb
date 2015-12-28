@@ -22,5 +22,9 @@ module MelodyLyric
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.x.sql_true = 'true'
+    config.x.sql_false = 'false'
+
   end
 end

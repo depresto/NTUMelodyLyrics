@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
 			if user['password_hash'] == login_hash
 				login_token = nil
 				if rememberred
-					sql = "UPDATE users SET rememberred = 1 WHERE s_id = '#{username}';"
+					sql = "UPDATE users SET rememberred = #{Rails.configuration.x.sql_true} WHERE s_id = '#{username}';"
 					ActiveRecord::Base.connection.execute(sql)
 					login_token = SecureRandom.base64
 					sql = "INSERT INTO login_token (s_id, token) VALUES ('#{username}','#{login_token}');"
