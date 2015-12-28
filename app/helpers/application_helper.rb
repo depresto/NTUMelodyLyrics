@@ -19,8 +19,8 @@ module ApplicationHelper
 			content_tag :div, class: 'header', \
 				data: {role: 'header'} do
 				link_to('返回', url_for(:back), \
-					'data-icon': 'arrow-l', \
-					'data-theme': 'b')+
+					data: {icon: 'arrow-l', \
+					theme: 'b'})+
 				image_tag('title-1.jpg')+
 				link_to("登出", \
 					session_path, \
