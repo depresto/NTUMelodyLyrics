@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   			return render :json => {:success => true, :redirect => main_path, :login_token => @user['login_token']}
 	  	else
 	  		logger.debug "Login error"
-	  		return render :json => {:success => false, :msg => ["Login failed."]}
+	  		return render :json => {:success => false, :msg => ["登入失敗"]}
 	  	end
   	end
   end
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
       return render :json => {:success => true, :redirect => main_path}
     else
       logger.debug "Login error"
-      return render :json => {:success => false, :msg => ["Login failed."]}
+      return render :json => {:success => false, :msg => ["登入失敗"]}
     end
   end
 
