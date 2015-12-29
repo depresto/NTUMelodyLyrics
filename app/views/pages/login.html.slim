@@ -34,10 +34,9 @@ div#login_main role="main" class="ui-content"
 				localStorage._login_token = data.login_token if (data.login_token)
 
 				$.mobile.changePage data.redirect, { transition: "fade"}
-				console.log 'test'
 			else
 				$('#error_message b').text(data.msg)
 
 		).on 'ajax:error' , (e, xhr, status, error) ->
 			console.error status+' : '+xhr.responseJSON.msg
-			$('#error_message b').text(xhr.responseJSON.msg)
+			$('#error_message b').text(error+':'+xhr.responseJSON.msg)

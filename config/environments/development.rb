@@ -36,6 +36,9 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # Prevent genertate public/assets files
+  config.serve_static_files = false
+
   # Add Rack::LiveReload to the bottom of the middleware stack with the default options.
   # config.middleware.insert_after ActionDispatch::Static, Rack::LiveReload
 

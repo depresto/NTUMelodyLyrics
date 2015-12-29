@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151226162249) do
+ActiveRecord::Schema.define(version: 20151229033737) do
 
-  create_table "login_token", force: :cascade do |t|
+  create_table "login_tokens", force: :cascade do |t|
     t.string "s_id"
     t.string "token"
   end
