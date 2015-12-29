@@ -17,27 +17,25 @@ div#adduser_main role="main" class="ui-content"
 		br
 		p#error_message
 			b
-
-- content_for :script do
-	coffee:
-		$('#adduser_form').on('ajax:success' , (e, data, status, xhr) ->
-			console.log data
-			if (data.success)
-				$('#error_message').text(data.msg)
-			else
-				$('#error_message').text(data.msg)
-				
-		).on 'ajax:error' , (e, xhr, status, error) ->
-			console.error status+' : '+xhr.responseJSON.msg
-			$('#error_message b').text(xhr.responseJSON.msg)
-	javascript:
-		$(document).ready(function() {
-			var form = document.getElementById('adduser_form');
-			form.noValidate = true;
-			form.addEventListener('submit', function(event) { // listen for form submitting
-				if (!event.target.checkValidity()) {
-					event.preventDefault(); // dismiss the default functionality
-					alert('Please, fill the form'); // error message
-				}
-			}, false);
-		});
+coffee:
+	$('#adduser_form').on('ajax:success' , (e, data, status, xhr) ->
+		console.log data
+		if (data.success)
+			$('#error_message').text(data.msg)
+		else
+			$('#error_message').text(data.msg)
+			
+	).on 'ajax:error' , (e, xhr, status, error) ->
+		console.error status+' : '+xhr.responseJSON.msg
+		$('#error_message b').text(xhr.responseJSON.msg)
+javascript:
+	$(document).ready(function() {
+		var form = document.getElementById('adduser_form');
+		form.noValidate = true;
+		form.addEventListener('submit', function(event) { // listen for form submitting
+			if (!event.target.checkValidity()) {
+				event.preventDefault(); // dismiss the default functionality
+				alert('Please, fill the form'); // error message
+			}
+		}, false);
+	});

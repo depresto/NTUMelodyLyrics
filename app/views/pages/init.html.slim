@@ -6,25 +6,24 @@ div#index_main role="main" class="ui-content"
 		.bg-wrap
 			=image_tag('bg.jpg', :id => 'bg')
 	
-- content_for :script do
-	coffee:
-		$ ->
-			if localStorage._login_token
-				console.log localStorage._login_token
-				$.ajax
-					type: 'POST',
-					url: Routes.token_path(),
-					data: {login_token: localStorage._login_token},
-					success: (response) ->
-						console.log response
-						if (response.success)
-							$.mobile.changePage response.redirect, { transition: "fade"}
-						else
-							$.mobile.changePage Routes.login_path(), { transition: "fade"}
-					,
-					error: (xhr) ->
-						console.log xhr
-				return
-			else
-				$.mobile.changePage Routes.login_path(), { transition: "fade"}
-				return
+coffee:
+	$ ->
+		if localStorage._login_token
+			console.log localStorage._login_token
+			$.ajax
+				type: 'POST',
+				url: Routes.token_path(),
+				data: {login_token: localStorage._login_token},
+				success: (response) ->
+					console.log response
+					if (response.success)
+						$.mobile.changePage response.redirect, { transition: "fade"}
+					else
+						$.mobile.changePage Routes.login_path(), { transition: "fade"}
+				,
+				error: (xhr) ->
+					console.log xhr
+			return
+		else
+			$.mobile.changePage Routes.login_path(), { transition: "fade"}
+			return

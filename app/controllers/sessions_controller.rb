@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
   end
 
   def token
-    @user = User.authenticate_token(params[:login_token])
+    @user = LoginToken.authenticate_token(params[:login_token])
     if @user
       session[:user_name] = @user['name']
       return render :json => {:success => true, :redirect => main_path}

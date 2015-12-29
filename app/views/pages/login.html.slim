@@ -24,19 +24,18 @@ div#login_main role="main" class="ui-content"
 		p#error_message
 			b
 
-- content_for :script do
-	coffee:
-		$('#login_form').on('ajax:success' , (e, data, status, xhr) ->
-			console.log data
-			if (data.success)
-				$('#error_message b').text('')
-				
-				localStorage._login_token = data.login_token if (data.login_token)
+coffee:
+	$('#login_form').on('ajax:success' , (e, data, status, xhr) ->
+		console.log data
+		if (data.success)
+			$('#error_message b').text('')
+			
+			localStorage._login_token = data.login_token if (data.login_token)
 
-				$.mobile.changePage data.redirect, { transition: "fade"}
-			else
-				$('#error_message b').text(data.msg)
+			$.mobile.changePage data.redirect, { transition: "fade"}
+		else
+			$('#error_message b').text(data.msg)
 
-		).on 'ajax:error' , (e, xhr, status, error) ->
-			console.error status+' : '+xhr.responseJSON.msg
-			$('#error_message b').text(error+':'+xhr.responseJSON.msg)
+	).on 'ajax:error' , (e, xhr, status, error) ->
+		console.error status+' : '+xhr.responseJSON.msg
+		$('#error_message b').text(error+':'+xhr.responseJSON.msg)
