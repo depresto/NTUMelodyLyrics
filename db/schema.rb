@@ -11,7 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151229033737) do
+ActiveRecord::Schema.define(version: 20160307181414) do
+
+  create_table "borrow_books", force: :cascade do |t|
+    t.integer "s_id",      null: false
+    t.string  "title",     null: false
+    t.integer "starttime", null: false
+    t.integer "endtime",   null: false
+    t.boolean "allday"
+    t.string  "color"
+  end
+
+  create_table "borrow_keyboards", force: :cascade do |t|
+    t.integer "s_id",      null: false
+    t.string  "title",     null: false
+    t.integer "starttime", null: false
+    t.integer "endtime",   null: false
+    t.boolean "allday"
+    t.string  "color"
+  end
+
+  create_table "borrow_rooms", force: :cascade do |t|
+    t.integer "s_id",      null: false
+    t.string  "title",     null: false
+    t.integer "starttime", null: false
+    t.integer "endtime",   null: false
+    t.boolean "allday"
+    t.string  "color"
+  end
+
+  create_table "calendars", force: :cascade do |t|
+    t.integer "s_id",      null: false
+    t.string  "title",     null: false
+    t.integer "starttime", null: false
+    t.integer "endtime",   null: false
+    t.boolean "allday"
+    t.string  "color"
+  end
 
   create_table "login_tokens", force: :cascade do |t|
     t.string "s_id"

@@ -3,7 +3,7 @@ class LoginToken < ActiveRecord::Base
 	before_save :generate_token
 
 	def generate_token
-		token = SecureRandom.base64
+		self.token = SecureRandom.urlsafe_base64
 	end
 
 	def self.authenticate_token(token)

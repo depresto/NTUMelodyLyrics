@@ -8,6 +8,10 @@ Rails.application.routes.draw do
   # get :init, :login, :main, controller: :pages
   get '/admin/adduser' => 'admin#adduser'
 
+  scope '/borrow' do
+    get '/room'   => 'borrowpages#room', :as => 'borrowroom'
+  end
+
   resources :users, only: [:create, :show], path: '/login/user'
 
   resource :session, only: [:create, :destroy]

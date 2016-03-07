@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Define Ruby version
-ruby '2.2.2'
+ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use SCSS for stylesheets
@@ -20,8 +20,12 @@ gem 'coffee-rails', '~> 4.1.0'
 gem "slim-rails"
 # Use Slim
 
+gem "bower-rails", "~> 0.10.0"
+# Use Bower
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+gem 'jquery-turbolinks'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jquery_mobile_rails'
 # jQuery Mobile

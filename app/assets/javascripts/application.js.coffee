@@ -14,5 +14,9 @@
 #= require turbolinks
 #= require_tree .
 #= require jquery
+#= require jquery.turbolinks
 #= require jquery_ujs
 #= require jquery.mobile
+#= require moment/min/moment.min
+#= require material-floating-button/dist/mfb
+#= require fullcalendar/dist/fullcalendar

@@ -4,20 +4,48 @@
 		"selected_items":
 		[
 			[
-				"p",
-				"password"
+				"jq",
+				"jquery"
 			],
 			[
-				"re",
-				"remember"
+				"jqe",
+				"jquery-mobile-bower"
 			],
 			[
-				"lo",
-				"localStorage"
+				"jqu",
+				"jquery-mobile"
 			],
 			[
-				"su",
-				"submit"
+				"nav",
+				"nativedroid2"
+			],
+			[
+				"BO",
+				"BOWER_COMPONENTS_ROOT"
+			],
+			[
+				"P",
+				"PROJECT_ROOT"
+			],
+			[
+				"PIPLE",
+				"pipeline"
+			],
+			[
+				"djan",
+				"django"
+			],
+			[
+				"BA",
+				"BASE_DIR"
+			],
+			[
+				"Or",
+				"OrderLine_T"
+			],
+			[
+				"tal",
+				"ta:l	text-align:left"
 			],
 			[
 				"di",
@@ -79,45 +107,53 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 286.0,
-		"last_filter": "sass",
+		"height": 285.0,
+		"last_filter": "rub",
 		"selected_items":
 		[
 			[
-				"sass",
-				"Set Syntax: SASS"
+				"rub",
+				"Set Syntax: Ruby Slim"
 			],
 			[
-				"coff",
-				"Set Syntax: CoffeeScript"
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
-				"ha",
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"ryb",
 				"Set Syntax: Ruby Haml"
 			],
 			[
-				"coffee",
-				"Set Syntax: CoffeeScript"
+				"e",
+				"Package Control: Enable Package"
 			],
 			[
-				"ruby ha",
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"set sy haml",
 				"Set Syntax: Ruby Haml"
 			],
 			[
-				"ruby ",
-				"Set Syntax: Ruby on Rails"
+				"haml",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"ena",
+				"Package Control: Enable Package"
 			],
 			[
 				"ins",
 				"Package Control: Install Package"
-			],
-			[
-				"livere",
-				"LiveReload: Enable/disable plug-ins"
-			],
-			[
-				"liver",
-				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				"remove",
@@ -164,6 +200,10 @@
 				"Git: Add..."
 			],
 			[
+				"livere",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
 				"c",
 				"CodeFormatter: Format as CSS Syntax"
 			],
@@ -178,6 +218,10 @@
 			[
 				"in",
 				"Package Control: Install Package"
+			],
+			[
+				"liver",
+				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				":",
@@ -212,7 +256,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 457.0
+		"width": 574.0
 	},
 	"console":
 	{
@@ -236,10 +280,27 @@
 	},
 	"file_history":
 	[
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/index.html.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/config.rb",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/assets/css/main.css.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/partials/login.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25_rails/app/models/opendata.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25_rails/config/database.yml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25_rails/Gemfile",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/PM25/settings.py",
+		"/usr/local/opt/pyenv/versions/3.5.1/lib/python3.5/site-packages/django/template/engine.py",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/templates/main/index.html",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/PM25/urls.py",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/main/admin.py",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/main/models.py",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/my.cnf.backup",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/my.cnf.bak",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/my.cnf",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/Mysql.txt",
+		"/Volumes/DataHD/Users/WayneHuang/My Documents/test.sql",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/apartment.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/layouts/layout.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/index.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/footer.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/js/tinymap.min.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config.rb",
 		"/Volumes/DataHD/Users/WayneHuang/Library/Mobile Documents/com~apple~CloudDocs/Course/Database/HW#2/7.sql",
 		"/Volumes/DataHD/Users/WayneHuang/Library/Mobile Documents/com~apple~CloudDocs/Course/Database/HW#2/8.sql",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/build/index.html",
@@ -247,17 +308,12 @@
 		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/about.css.sass",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/config.rb",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/layouts/layout.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/footer.haml",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/partial/footer.css.sass",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/tour.css.sass",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header-fixed.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index.css.sass",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index/header.sass",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/all.sass",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/about.html.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/apartment.html.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/js/tinymap.min.js",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/tour.html.haml",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/opt/css/tour.css",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/about.sass",
@@ -270,7 +326,6 @@
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header-fixed.html",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/Gemfile",
 		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/index.html.haml",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/index.html.erb",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header.haml",
 		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
@@ -304,7 +359,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			".googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"}\n    :javascript\n      window.jQuery || document.write('<script src=\"library/js/vendor/jquery-2.1.1.js\"><\\/script>')\n    = javascript_include_tag \"libs/jquery.mobile-1.4.5.min.js\"\n    = javascript_include_tag \"main\"\n\n    = yield_content :script",
+			"base.",
+			"base",
+			"STATICFILES_",
+			")))\n",
+			"TEMPLATE_CONTEXT_PROCESSORS",
+			"STATICFILES_FINDERS",
+			"static",
+			"(?<=\\.[^\\n])[\\s]+(?=\\||\\_|\\/|\\\\|')",
+			"(?<=\\.[^\\n])\\s(?=\\||\\_|\\/|\\\\|')",
+			"(?<=\\.[^\\n])\\s+(?=\\||\\_|\\/|\\\\|')",
+			"\\b( )\\b",
+			"^[.|\\|]+$",
+			"[\\n]$",
+			"[ ||\\n]$",
+			"/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
+			"a.container.innerHTML",
+			"\"en\"",
+			"hum",
 			" ",
 			"w",
 			"\\p",
@@ -364,6 +436,22 @@
 		"regex": true,
 		"replace_history":
 		[
+			"$`.",
+			"$`\\",
+			"$`\\t",
+			"$`\\.",
+			"`\\.",
+			"$`\\.",
+			"$1\\.",
+			"$1",
+			"$$",
+			"$&\\.",
+			"$&(\\.)",
+			"$&",
+			"$\\s",
+			"$&",
+			".",
+			"\"zh-Hant-TW\"",
 			" ",
 			""
 		],

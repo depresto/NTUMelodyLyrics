@@ -1,0 +1,6 @@
+<% if @user %>
+	$('#info_message b').text('<%= flash[:notice] %>');
+	$.mobile.changePage("<%=main_path %>", { transition: "fade"});
+<% else %>
+	$('#error_message b').text('<%= flash[:notice] %>');
+<% end %>

@@ -1,8 +1,6 @@
 - title '登入'
 /!- description ''
 
-= bg_header
-
 div#login_main role="main" class="ui-content" 
 	h3 登入
 
@@ -23,19 +21,6 @@ div#login_main role="main" class="ui-content"
 
 		p#error_message
 			b
-
-coffee:
-	$('#login_form').on('ajax:success' , (e, data, status, xhr) ->
-		console.log data
-		if (data.success)
-			$('#error_message b').text('')
+		p#info_message
+			b=flash[:notice]
 			
-			localStorage._login_token = data.login_token if (data.login_token)
-
-			$.mobile.changePage data.redirect, { transition: "fade"}
-		else
-			$('#error_message b').text(data.msg)
-
-	).on 'ajax:error' , (e, xhr, status, error) ->
-		console.error status+' : '+xhr.responseJSON.msg
-		$('#error_message b').text(error+':'+xhr.responseJSON.msg)

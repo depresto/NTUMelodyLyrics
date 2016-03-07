@@ -1,12 +1,10 @@
-= bg_header
-	.ui-btn-right data-icon="false" 登出
 h3#user_bar
 	| Hi, 
 	=session[:user_name]
 
 .ui-grid-a
 	.ui-block-a 
-		= link_to('#', 'data-role': 'button')
+		= link_to(borrowroom_path, 'data-role': 'button')
 			br/
 			= fa_icon "university 5x"
 			p 社辦借用
@@ -25,3 +23,4 @@ h3#user_bar
 			br/
 			= fa_icon "music 5x"
 			p 社琴借用
+	

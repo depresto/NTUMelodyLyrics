@@ -1,0 +1,35 @@
+- title '社辦借用'
+
+h1 社辦借用
+
+#calendar
+
+ul class="mfb-component--br mfb-slidein" data-mfb-hover=false
+	li class="mfb-component__wrap"
+        =link_to main_url, class:"mfb-component__button--main"
+        	i class="mfb-component__main-icon--resting fa fa-plus"
+
+div data-role="popup" id="popupDialog"
+	h1 test
+
+javascript:
+	height = parseInt($(window).height() - 200);
+	$('#calendar').fullCalendar({
+		editable: false, //Don't allow editing of events
+		defaultView: 'agendaWeek', //Only show week view
+		handleWindowResize: true,
+		columnFormat: {
+		    week: 'ddd' // Only show day of the week names
+		},
+		minTime: '08:00:00', // Start time for the calendar
+		maxTime: '22:00:00', //End time for the calendar
+		displayEventTime: true, // Display event time
+		height: height
+	});
+	$('#calendar').fullCalendar('today');
+
+sass:
+	h1
+		text-align: center
+	i
+		color: #fff
