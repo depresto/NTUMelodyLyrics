@@ -10,7 +10,11 @@ Rails.application.routes.draw do
 
   scope '/borrow' do
     get '/room'   => 'borrowpages#room', :as => 'borrowroom'
+    get '/book'   => 'borrowpages#book', :as => 'borrowbook'
+    get '/keyboard'   => 'borrowpages#keyboard', :as => 'borrowkeyboard'
   end
+
+  get '/calendar'   => 'borrowpages#calendar', :as => 'calendar'
 
   resources :users, only: [:create, :show], path: '/login/user'
 
