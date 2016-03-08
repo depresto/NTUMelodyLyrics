@@ -1,32 +1,59 @@
 h1 =content_for(:title)
 
-#calendar
-
 =yield
+
+#calendar
 
 ul class="mfb-component--br mfb-slidein" data-mfb-hover=false
 	li class="mfb-component__wrap"
-        =link_to main_url, class:"mfb-component__button--main"
+        =link_to '#popupDialog', class:"mfb-component__button--main", "data-rel": "popup", 
+        	"data-position-to": "window"
         	i class="mfb-component__main-icon--resting fa fa-plus"
 
-div data-role="popup" id="popupDialog"
-	h1 test
+div data-role="popup" id="popupDialog" data-transition="pop"
+	form
+		div style="padding:10px 20px;"
+			label for="startdate" 開始時間
+			.ui-grid-a
+				.ui-block-a
+					input type="date" name="startdate" id="input-startdate" class="input-date"/
+				.ui-block-b
+					input type="time" name="starttime" id="input-starttime" class="input-time"/
+			label for="enddate" 結束時間
+			.ui-grid-a
+				.ui-block-a
+					input type="date" name="enddate" id="input-enddate" class="input-date"/
+				.ui-block-b
+					input type="time" name="endtime" id="input-endtime" class="input-time"/
+			div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
+				span 預約
+				input data-enhanced="true" type="submit"/
+			a class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
 
 javascript:
 	$(function(){
-	height = parseInt($(window).height() - 200);
-	$('#calendar').fullCalendar({
-		editable: false, //Don't allow editing of events
-		defaultView: 'agendaWeek', //Only show week view
-		handleWindowResize: true,
-		columnFormat: {
-		    week: 'ddd' // Only show day of the week names
-		},
-		minTime: '08:00:00', // Start time for the calendar
-		maxTime: '22:00:00', //End time for the calendar
-		displayEventTime: true, // Display event time
-		height: height
-	});
+		height = parseInt($(window).height() - 200);
+		$('#calendar').fullCalendar({
+			editable: false, //Don't allow editing of events
+			defaultView: 'agendaWeek', //Only show week view
+			handleWindowResize: true,
+			columnFormat: {
+			    week: 'ddd' // Only show day of the week names
+			},
+			minTime: '08:00:00', // Start time for the calendar
+			maxTime: '22:00:00', //End time for the calendar
+			displayEventTime: true, // Display event time
+			height: height,
+			dayClick: function(date, jsEvent, view) {
+				$('#popupDialog').popup('open');
+				$(".input-date").val(date.format('YYYY-MM-DD'));
+				$(".input-time").val(date.format('HH:mm'));
+			}
+		});
+
+		datetime = $('#calendar').fullCalendar('getDate');
+		$(".input-date").val(datetime.format('YYYY-MM-DD'));
+		$(".input-time").val(datetime.format('HH:mm'));
 	});
 
 sass:
@@ -34,3 +61,9 @@ sass:
 		text-align: center
 	i
 		color: #fff
+	.ui-input-text
+		width: 90%
+		box-shadow: none
+		border-width: 0px
+		border-radius: 0
+		border-bottom-width: 1px
