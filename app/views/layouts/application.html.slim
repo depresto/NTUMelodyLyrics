@@ -21,7 +21,7 @@ html.no-js lang="zh-Hant-TW"
   body
     /![if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p
     = javascript_include_tag "application"
-    div data-role="page" class="main" 
+    div data-role="page" class="main" class=@pageclass
       = bg_header
       == yield
     

@@ -1,3 +1,4 @@
+- @pageclass = 'borrowpage'
 h1 =content_for(:title)
 
 =yield
@@ -6,8 +7,7 @@ h1 =content_for(:title)
 
 ul class="mfb-component--br mfb-slidein" data-mfb-hover=false
 	li class="mfb-component__wrap"
-        =link_to '#popupDialog', class:"mfb-component__button--main", "data-rel": "popup", 
-        	"data-position-to": "window"
+        a href='#popupDialog' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
         	i class="mfb-component__main-icon--resting fa fa-plus"
 
 div data-role="popup" id="popupDialog" data-transition="pop"
@@ -28,10 +28,10 @@ div data-role="popup" id="popupDialog" data-transition="pop"
 			div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
 				span 預約
 				input data-enhanced="true" type="submit"/
-			a class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
+			a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
 
 javascript:
-	$(function(){
+	$(document).on('pageshow', '.borrowpage', function(e, data){
 		height = parseInt($(window).height() - 200);
 		$('#calendar').fullCalendar({
 			editable: false, //Don't allow editing of events
@@ -45,9 +45,9 @@ javascript:
 			displayEventTime: true, // Display event time
 			height: height,
 			dayClick: function(date, jsEvent, view) {
-				$('#popupDialog').popup('open');
 				$(".input-date").val(date.format('YYYY-MM-DD'));
 				$(".input-time").val(date.format('HH:mm'));
+				$('#popupDialog').popup('open');
 			}
 		});
 

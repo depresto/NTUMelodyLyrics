@@ -1,4 +1,5 @@
 - title '首頁'
+- @pageclass ='init'
 /!- description ''
 
 div#index_main role="main" class="ui-content" 
@@ -7,6 +8,6 @@ div#index_main role="main" class="ui-content"
 			=image_tag('bg.jpg', :id => 'bg')
 	
 javascript:
-	$(function(){
+	$(document).on('pageshow','.init',function(e,data){  
 		$.mobile.changePage("#{@url}", { transition: "fade"});
 	});
