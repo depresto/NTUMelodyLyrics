@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	attr_accessor :password
 	alias_attribute :username, :s_id
 	# 學號與姓名不可為空
-	validates :s_id, uniqueness: true
+	validates :s_id, uniqueness: true, presence: true
 	validates :password, presence: true
 	before_save :encrypt_password
 
@@ -20,7 +20,7 @@ class User < ActiveRecord::Base
 		#sql = "SELECT s_id, name, password_hash, password_salt, rememberred FROM users WHERE s_id = '#{username}';"
 		#sql = "SELECT * FROM users"
 		#result = ActiveRecord::Base.connection.execute(sql)
-		result = where(s_id: username).select(:s_id, :name, :password_hash, :password_salt).limit(1).as_json
+		result = where(s_id: username).select(:s_id, :name, :password_hash, :password_salt, :isadmin).limit(1).as_json
 		if result.blank?
 			return nil
 		end

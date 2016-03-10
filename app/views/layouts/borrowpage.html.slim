@@ -1,4 +1,10 @@
 - @pageclass = 'borrowpage'
+
+- if current_page?(calendar_path) 
+	- @view = 'month'
+- else
+	- @view = 'agendaWeek'
+
 h1 =content_for(:title)
 
 =yield
@@ -35,7 +41,7 @@ javascript:
 		height = parseInt($(window).height() - 200);
 		$('#calendar').fullCalendar({
 			editable: false, //Don't allow editing of events
-			defaultView: 'agendaWeek', //Only show week view
+			defaultView: '#{@view}', //Only show week view
 			handleWindowResize: true,
 			columnFormat: {
 			    week: 'ddd' // Only show day of the week names

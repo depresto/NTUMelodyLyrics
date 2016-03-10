@@ -23,3 +23,9 @@ h3#user_bar
 			br/
 			= fa_icon "music 5x"
 			p 社琴借用
+	- if session[:isadmin] == true
+		.ui-block-a 
+			= link_to(adduser_path, 'data-role': 'button')
+				br/
+				= fa_icon "user-plus 5x"
+				p 新增會員

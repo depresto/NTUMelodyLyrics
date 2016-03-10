@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
   	@user = User.authenticate(params[:username], params[:password], params[:remember])
     if @user 
       session[:user_name] = @user['name']
+      session[:isadmin] = @user['isadmin']
       @message = "Login success"
       logger.debug @message 
     else

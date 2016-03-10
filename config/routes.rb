@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get '/main'   => 'pages#main',    :as => 'main'
   # Same as:
   # get :init, :login, :main, controller: :pages
-  get '/admin/adduser' => 'admin#adduser'
+  scope 'admin' do
+    get '/adduser' => 'admin#adduser', :as => 'adduser'
+  end
 
   scope '/borrow' do
     get '/room'   => 'borrowpages#room', :as => 'borrowroom'
