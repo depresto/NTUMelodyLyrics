@@ -20,7 +20,7 @@ div#login_main role="main" class="ui-content"
 		br
 
 		p#error_message
-			b
+			b=flash[:error]
 		p#info_message
 			b=flash[:notice]
 			

@@ -1,0 +1,24 @@
+$(document).on('pageshow', '.borrowpage', function(e, data){
+	height = parseInt($(window).height() - 200);
+	$('#calendar').fullCalendar({
+		editable: false, //Don't allow editing of events
+		defaultView: '<%= @view%>', //Only show week view
+		handleWindowResize: true,
+		columnFormat: {
+		    week: 'ddd' // Only show day of the week names
+		},
+		minTime: '08:00:00', // Start time for the calendar
+		maxTime: '22:00:00', //End time for the calendar
+		displayEventTime: true, // Display event time
+		height: height,
+		dayClick: function(date, jsEvent, view) {
+			$(".input-date").val(date.format('YYYY-MM-DD'));
+			$(".input-time").val(date.format('HH:mm'));
+			$('#popupDialog').popup('open');
+		}
+	});
+
+	datetime = $('#calendar').fullCalendar('getDate');
+	$(".input-date").val(datetime.format('YYYY-MM-DD'));
+	$(".input-time").val(datetime.format('HH:mm'));
+});

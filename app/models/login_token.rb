@@ -13,7 +13,7 @@ class LoginToken < ActiveRecord::Base
 		#logger.debug result
 		#sql = "SELECT s_id, name FROM users WHERE s_id = '#{result['s_id']}';"
 		#user = ActiveRecord::Base.connection.execute(sql)[0]
-		user = User.select(:s_id, :name).where(s_id: result['s_id']).limit(1)
+		result = where(s_id: username).select(:s_id, :name, :password_hash, :password_salt, :isadmin).limit(1)
 		if user.blank?
 			nil
 		else

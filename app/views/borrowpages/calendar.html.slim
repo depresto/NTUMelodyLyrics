@@ -1,2 +1,7 @@
 - title '社團行事曆'
 =render template: "layouts/borrowpage"
+
+- if !session[:isadmin]
+	sass:
+		#addButton
+			display: none

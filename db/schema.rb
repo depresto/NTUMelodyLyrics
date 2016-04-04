@@ -11,42 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307181414) do
-
-  create_table "borrow_books", force: :cascade do |t|
-    t.integer "s_id",      null: false
-    t.string  "title",     null: false
-    t.integer "starttime", null: false
-    t.integer "endtime",   null: false
-    t.boolean "allday"
-    t.string  "color"
-  end
-
-  create_table "borrow_keyboards", force: :cascade do |t|
-    t.integer "s_id",      null: false
-    t.string  "title",     null: false
-    t.integer "starttime", null: false
-    t.integer "endtime",   null: false
-    t.boolean "allday"
-    t.string  "color"
-  end
-
-  create_table "borrow_rooms", force: :cascade do |t|
-    t.integer "s_id",      null: false
-    t.string  "title",     null: false
-    t.integer "starttime", null: false
-    t.integer "endtime",   null: false
-    t.boolean "allday"
-    t.string  "color"
-  end
+ActiveRecord::Schema.define(version: 20160403110643) do
 
   create_table "calendars", force: :cascade do |t|
-    t.integer "s_id",      null: false
-    t.string  "title",     null: false
-    t.integer "starttime", null: false
-    t.integer "endtime",   null: false
+    t.integer "c_id",        null: false
+    t.string  "title",       null: false
+    t.integer "starttime",   null: false
+    t.integer "endtime",     null: false
     t.boolean "allday"
     t.string  "color"
+    t.string  "type"
+    t.integer "borrow_p_id"
+  end
+
+  create_table "club_properties", force: :cascade do |t|
+    t.integer "p_id",                       null: false
+    t.string  "name",                       null: false
+    t.boolean "borrowable", default: false
   end
 
   create_table "login_tokens", force: :cascade do |t|

@@ -4,11 +4,14 @@ class ApplicationController < ActionController::Base
 
   #before_action :autherticate_user!, except: [:init, :login]
 
+  protected
   def authenticate_user!
     if (!session[:user_name])
+      @message = '您尚未登入'
+      flash[:error] = @message
       redirect_to login_url
     else
-      redirect_to login_url
+      nil
     end
   end
 

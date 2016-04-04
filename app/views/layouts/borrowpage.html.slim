@@ -1,23 +1,18 @@
 - @pageclass = 'borrowpage'
 
-- if current_page?(calendar_path) 
-	- @view = 'month'
-- else
-	- @view = 'agendaWeek'
-
 h1 =content_for(:title)
 
 =yield
 
 #calendar
 
-ul class="mfb-component--br mfb-slidein" data-mfb-hover=false
+ul#addButton class="mfb-component--br mfb-slidein" data-mfb-hover=false
 	li class="mfb-component__wrap"
         a href='#popupDialog' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
         	i class="mfb-component__main-icon--resting fa fa-plus"
 
 div data-role="popup" id="popupDialog" data-transition="pop"
-	form
+	= form_tag( @send_url, remote: true)
 		div style="padding:10px 20px;"
 			label for="startdate" 開始時間
 			.ui-grid-a
@@ -36,39 +31,18 @@ div data-role="popup" id="popupDialog" data-transition="pop"
 				input data-enhanced="true" type="submit"/
 			a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
 
-javascript:
-	$(document).on('pageshow', '.borrowpage', function(e, data){
-		height = parseInt($(window).height() - 200);
-		$('#calendar').fullCalendar({
-			editable: false, //Don't allow editing of events
-			defaultView: '#{@view}', //Only show week view
-			handleWindowResize: true,
-			columnFormat: {
-			    week: 'ddd' // Only show day of the week names
-			},
-			minTime: '08:00:00', // Start time for the calendar
-			maxTime: '22:00:00', //End time for the calendar
-			displayEventTime: true, // Display event time
-			height: height,
-			dayClick: function(date, jsEvent, view) {
-				$(".input-date").val(date.format('YYYY-MM-DD'));
-				$(".input-time").val(date.format('HH:mm'));
-				$('#popupDialog').popup('open');
-			}
-		});
-
-		datetime = $('#calendar').fullCalendar('getDate');
-		$(".input-date").val(datetime.format('YYYY-MM-DD'));
-		$(".input-time").val(datetime.format('HH:mm'));
-	});
+script
+	= render(:partial => 'borrowpages.js.erb', :handlers => [:erb], :formats => [:js])
 
 sass:
 	h1
 		text-align: center
 	i
 		color: #fff
-	.ui-input-text
+	.ui-grid-a
 		width: 90%
+	.ui-input-text
+		width: 200px
 		box-shadow: none
 		border-width: 0px
 		border-radius: 0

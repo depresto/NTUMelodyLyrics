@@ -4,48 +4,140 @@
 		"selected_items":
 		[
 			[
-				"jq",
-				"jquery"
+				"max",
+				"maxSum"
 			],
 			[
-				"jqe",
-				"jquery-mobile-bower"
+				"tu",
+				"turn_2"
 			],
 			[
-				"jqu",
-				"jquery-mobile"
+				"t",
+				"turn"
+			],
+			[
+				"tur",
+				"turn"
+			],
+			[
+				"turn",
+				"turn_2"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"va",
+				"va-t	vertical-align: top;"
+			],
+			[
+				"ta",
+				"ta-l	text-align: left;"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"bdr",
+				"bdrs	border-radius"
+			],
+			[
+				"cont",
+				"content	Attr"
+			],
+			[
+				"taL",
+				"ta:l	text-align:left"
+			],
+			[
+				"al",
+				"alt	Attr"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"nth",
+				"nth-child"
 			],
 			[
 				"nav",
-				"nativedroid2"
+				"nav-sub-menu"
 			],
 			[
-				"BO",
-				"BOWER_COMPONENTS_ROOT"
+				"con",
+				"conference"
 			],
 			[
-				"P",
-				"PROJECT_ROOT"
+				"bt",
+				"bt	border-top:"
 			],
 			[
-				"PIPLE",
-				"pipeline"
+				"c",
+				"class	Attr"
 			],
 			[
-				"djan",
-				"django"
+				"me",
+				"menu-toggle"
 			],
 			[
-				"BA",
-				"BASE_DIR"
+				"use",
+				"username"
 			],
 			[
-				"Or",
-				"OrderLine_T"
+				"user",
+				"user_params"
 			],
 			[
-				"tal",
-				"ta:l	text-align:left"
+				"on",
+				"only"
+			],
+			[
+				"do",
+				"do"
+			],
+			[
+				"name",
+				"namespace"
+			],
+			[
+				"op",
+				"opt	option(..)"
+			],
+			[
+				"des",
+				"description"
+			],
+			[
+				"in",
+				"init"
+			],
+			[
+				"p",
+				"password"
+			],
+			[
+				"re",
+				"remember"
+			],
+			[
+				"lo",
+				"localStorage"
+			],
+			[
+				"su",
+				"submit"
 			],
 			[
 				"di",
@@ -58,14 +150,6 @@
 			[
 				"conte",
 				"content_1"
-			],
-			[
-				"cont",
-				"content	@content"
-			],
-			[
-				"con",
-				"content	@content"
 			],
 			[
 				"st",
@@ -103,57 +187,133 @@
 	"build_system": "",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/C++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/C++.sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
 		"height": 285.0,
-		"last_filter": "rub",
+		"last_filter": "mar",
 		"selected_items":
 		[
 			[
-				"rub",
+				"mar",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"html",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"ma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"sli",
 				"Set Syntax: Ruby Slim"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
+				"livere",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"cod",
+				"CodeFormatter: Format as CSS Syntax"
+			],
+			[
+				"livre",
+				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				"slim",
 				"Set Syntax: Ruby Slim"
 			],
 			[
-				"dis",
-				"Package Control: Disable Package"
+				"code",
+				"CodeFormatter: Format as CSS Syntax"
 			],
 			[
-				"ryb",
-				"Set Syntax: Ruby Haml"
+				"con",
+				"ConvertToUTF8: Reload with Encoding"
 			],
 			[
-				"e",
+				"convert",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"sass",
+				"Set Syntax: SASS"
+			],
+			[
+				"enable",
 				"Package Control: Enable Package"
 			],
 			[
-				"list",
-				"Package Control: List Packages"
-			],
-			[
-				"set sy haml",
-				"Set Syntax: Ruby Haml"
+				"dis",
+				"Package Control: Disable Package"
 			],
 			[
 				"haml",
 				"Set Syntax: Ruby Haml"
 			],
 			[
-				"ena",
-				"Package Control: Enable Package"
+				"coff",
+				"Set Syntax: CoffeeScript"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
+				"ha",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"ruby ha",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"ruby ",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"liver",
+				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				"remove",
@@ -200,15 +360,7 @@
 				"Git: Add..."
 			],
 			[
-				"livere",
-				"LiveReload: Enable/disable plug-ins"
-			],
-			[
 				"c",
-				"CodeFormatter: Format as CSS Syntax"
-			],
-			[
-				"code",
 				"CodeFormatter: Format as CSS Syntax"
 			],
 			[
@@ -218,10 +370,6 @@
 			[
 				"in",
 				"Package Control: Install Package"
-			],
-			[
-				"liver",
-				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				":",
@@ -240,19 +388,11 @@
 				"Package Control: Advanced Install Package"
 			],
 			[
-				"enable",
-				"Package Control: Disable Package"
-			],
-			[
 				"pakc",
 				"Package Control: List Packages"
 			],
 			[
 				"i",
-				"Package Control: Install Package"
-			],
-			[
-				"inst",
 				"Package Control: Install Package"
 			]
 		],
@@ -278,69 +418,140 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric"
+	],
 	"file_history":
 	[
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25_rails/app/models/opendata.rb",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25_rails/config/database.yml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25_rails/Gemfile",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/PM25/settings.py",
-		"/usr/local/opt/pyenv/versions/3.5.1/lib/python3.5/site-packages/django/template/engine.py",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/templates/main/index.html",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/PM25/urls.py",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/main/admin.py",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/main/models.py",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/my.cnf.backup",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/my.cnf.bak",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/my.cnf",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/PM25/Mysql.txt",
-		"/Volumes/DataHD/Users/WayneHuang/My Documents/test.sql",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/apartment.html.haml",
+		"/tmp/subl stdin es6oE8.txt",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/marketing.html.md.erb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/secretariats.md.erb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/administrative.html.md.erb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/partials/staff.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/template/responsive.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/partials/nav.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/partials/staff.slim",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/academic.html.md",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/template/style.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/secretariats.md",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/layouts/layout.slim",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/pages.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/My Documents/Test/HW4pb3.cpp",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/academic.html.markdown.erb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/team.html.slim",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/index.html.erb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/universal.scss",
+		"/Volumes/DataHD/Users/WayneHuang/My Documents/NTUmelody",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/jquery.orgchart.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/partials/nav.slim",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/social/day2.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/My Documents/VikingBar/ca-bundle.crt",
+		"/Volumes/DataHD/Users/WayneHuang/My Documents/VikingBar/id_rsa",
+		"/Volumes/DataHD/Users/WayneHuang/My Documents/VikingBar/viking.crt",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/js/lib/jquery.orgchart.min.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/team/academic.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/layouts/team_layout.slim",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/data/team.yaml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/social/funtainan.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/agenda.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/contactus/main.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/sponsor.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/social/day1.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/accommodation/main.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/data/navbar.yaml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/font-icons.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/registration/payment.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/Accommodation/main.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/registration/apply.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/js/lib/tinymap.min.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/registration/notice.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/accmondation/main.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/accomodation/main.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/pmun.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/ncku.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/conference/disec.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/conference/main.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/conference/arf.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/conference/excomm.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/conference/ga.html.markdown",
+		"/usr/local/bin/wine",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/db_explorer/config/database.yml",
+		"/Library/WebServer/Documents/phpLiteAdmin/phpliteadmin.config.php",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/index.css.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/comingsoon.html.slim",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/js/main.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/human.txt",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/humans.txt",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/Gemfile",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/js/lib/plugins.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/sikyo/css/index.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/sikyo/css/index/mobile.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/sikyo/index.html",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/data/navbar.yaml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about-pmun.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/NCKU.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/pages/about/PMUN.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/partials/nav.erb",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/layouts/layout.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/about/NCKU.html.markdown",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/about/PMUN.html.markdown",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/index.html.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/footer.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index.css.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/js/tinymap.min.js",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/sikyo/js/main.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/phoenixmun2016.org/js/main.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/partials/nav.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/phoenixmun2016.org/index.html",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/all.css.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/template.css.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/template/dark.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib.css.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/magnific-popup.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/template/style.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/font-icons.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/magnific-popup.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/template/responsive.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/template/dark.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/style.css.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/dark.css",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/dark.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/source/css/lib/bootstrap.scss",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/CKU_MUN/Gemfile.lock",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/models/user.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/views/session/session.json.jbuilder",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/controllers/pages_controller.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/Gemfile",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/helpers/pages_helper.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/application.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/assets/javascripts/application.js.coffee",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/db/migrate/20151218082701_create_users.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/db/schema.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/assets/stylesheets/pages/login.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/controllers/application_controller.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/database.yml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/application.yml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/boot.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/models/settings.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/environments/development.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/initializers/sass.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/assets/stylesheets/pages.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/assets/stylesheets/pages/init.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/assets/stylesheets/application.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/Gemfile.lock",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/Guardfile",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/app/assets/javascripts/application.js",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/compass.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric/config/environment.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/index.html.haml",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/config.rb",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/assets/css/main.css.sass",
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/MelodyLyric_1/source/partials/login.haml",
 		"/Volumes/DataHD/Users/WayneHuang/Library/Mobile Documents/com~apple~CloudDocs/Course/Database/HW#2/7.sql",
 		"/Volumes/DataHD/Users/WayneHuang/Library/Mobile Documents/com~apple~CloudDocs/Course/Database/HW#2/8.sql",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/build/index.html",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/build/about.html",
 		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/LiveReload/LiveReload.sublime-settings",
 		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/about.css.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/config.rb",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/partial/footer.css.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/tour.css.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header-fixed.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index/header.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/all.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/about.html.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/tour.html.haml",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/opt/css/tour.css",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/about.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/opt/css/about.css",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/lib.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/opt/css/index.css",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/css/index/weather.sass",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/layouts/layout.erb.bak",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header-fixed.html",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/Gemfile",
-		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/User/LiveReload.sublime-settings",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/index.html.erb",
-		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/source/partials/header.haml",
-		"/Volumes/DataHD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Volumes/DataHD/Users/WayneHuang/Sites/db_scenarioB/index.php",
-		"/Volumes/DataHD/Users/WayneHuang/Sites/db_scenarioB/DB_config.php",
-		"/Volumes/Data HD/Users/WayneHuang/Sites/db_scenarioB/DB_Class.php",
-		"/Volumes/Data HD/Users/WayneHuang/Sites/db_scenarioB/DB_Class_5.5.php",
-		"/Volumes/Data HD/Users/WayneHuang/Downloads/info.php",
-		"/Volumes/Data HD/Users/WayneHuang/Sites/db_scenarioB/DB_config.php",
-		"/usr/local/php5-5.6.14-20151002-085853/php.d/99-liip-developer.ini",
-		"/Volumes/Data HD/Users/WayneHuang/Sites/owncloud/config/config.php",
-		"/usr/local/etc/php/5.5/conf.d/ext-apcu.ini",
-		"/usr/local/etc/php/5.5/php.ini",
-		"/Volumes/Data HD/Users/WayneHuang/Sites/phpinfo.php",
-		"/Volumes/Data HD/Users/WayneHuang/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+		"/Volumes/DataHD/Users/WayneHuang/WebDev/st-petersburg/config.rb"
 	],
 	"find":
 	{
@@ -359,24 +570,62 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"base.",
-			"base",
-			"STATICFILES_",
-			")))\n",
-			"TEMPLATE_CONTEXT_PROCESSORS",
-			"STATICFILES_FINDERS",
-			"static",
-			"(?<=\\.[^\\n])[\\s]+(?=\\||\\_|\\/|\\\\|')",
-			"(?<=\\.[^\\n])\\s(?=\\||\\_|\\/|\\\\|')",
-			"(?<=\\.[^\\n])\\s+(?=\\||\\_|\\/|\\\\|')",
-			"\\b( )\\b",
-			"^[.|\\|]+$",
-			"[\\n]$",
-			"[ ||\\n]$",
-			"/^(([^<>()[\\]\\\\.,;:\\s@\\\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/",
-			"a.container.innerHTML",
-			"\"en\"",
-			"hum",
+			"#page-title",
+			"page-title",
+			"page-title ",
+			"page-title h1",
+			"PAGE-TITLE",
+			"soon",
+			"flag",
+			"enve",
+			"mail",
+			",，",
+			",",
+			".col_",
+			".col.",
+			"444",
+			".nav-sub-menu",
+			"javascript",
+			"\\}",
+			"}",
+			";",
+			"\\{",
+			"\\}\\n",
+			"}",
+			";",
+			"padding: 20px 0 ",
+			"page-title",
+			"menu_",
+			"menu",
+			"float",
+			"../images/",
+			"../fonts/",
+			"../images/",
+			"images/",
+			"fonts/",
+			"images/",
+			"../images/",
+			"images/",
+			"../images/",
+			"/images/",
+			"dark",
+			"images/",
+			"dark",
+			"images/",
+			"/images",
+			"images",
+			"../images",
+			"iages",
+			"img",
+			"url",
+			"img",
+			"login",
+			"should",
+			"spro",
+			"%meta{:content => data.page.description || \"SET YOUR SITE DESCRIPTION\", :name => \"description\"}",
+			"YOUR",
+			"//",
+			".googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js\"}\n    :javascript\n      window.jQuery || document.write('<script src=\"library/js/vendor/jquery-2.1.1.js\"><\\/script>')\n    = javascript_include_tag \"libs/jquery.mobile-1.4.5.min.js\"\n    = javascript_include_tag \"main\"\n\n    = yield_content :script",
 			" ",
 			"w",
 			"\\p",
@@ -436,22 +685,21 @@
 		"regex": true,
 		"replace_history":
 		[
-			"$`.",
-			"$`\\",
-			"$`\\t",
-			"$`\\.",
-			"`\\.",
-			"$`\\.",
-			"$1\\.",
-			"$1",
-			"$$",
-			"$&\\.",
-			"$&(\\.)",
-			"$&",
-			"$\\s",
-			"$&",
-			".",
-			"\"zh-Hant-TW\"",
+			"，",
+			"",
+			"images/",
+			"fonts/",
+			"images/",
+			"../images/",
+			"../fonts/",
+			"../images/",
+			"images/",
+			"../images/",
+			"images/",
+			"../images/",
+			"../images",
+			"../../images",
+			"#",
 			" ",
 			""
 		],
@@ -463,11 +711,6 @@
 	},
 	"groups":
 	[
-		{
-			"sheets":
-			[
-			]
-		},
 		{
 			"sheets":
 			[
@@ -491,12 +734,6 @@
 				0,
 				1,
 				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
 			]
 		],
 		"cols":
@@ -507,11 +744,14 @@
 		"rows":
 		[
 			0.0,
-			0.5,
 			1.0
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 98.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -526,13 +766,25 @@
 	{
 		"height": 42.0
 	},
-	"save_all_on_build": true,
+	"save_all_on_build": false,
 	"select_file":
 	{
 		"height": 0.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"ge",
+				"Gemfile"
+			],
+			[
+				"",
+				"app/helpers/pages_helper.rb"
+			]
 		],
 		"width": 0.0
 	},
@@ -554,7 +806,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

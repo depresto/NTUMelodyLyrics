@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'pages#init'
 
+  # Let's encrypt
+  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
+
   get '/init'   => 'pages#init',    :as => 'init'
   get '/login'  => 'pages#login',   :as => 'login'
   get '/main'   => 'pages#main',    :as => 'main'
