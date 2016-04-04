@@ -1,6 +1,6 @@
 - @pageclass = 'borrowpage'
 
-h1 =content_for(:title)
+h2 =content_for(:title)
 
 =yield
 
@@ -11,8 +11,8 @@ ul#addButton class="mfb-component--br mfb-slidein" data-mfb-hover=false
         a href='#popupDialog' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
         	i class="mfb-component__main-icon--resting fa fa-plus"
 
-div data-role="popup" id="popupDialog" data-transition="pop"
-	= form_tag( @send_url, remote: true)
+div data-role="popup" id="popupDialog" data-transition="pop"  data-history="false"
+	= form_tag({:controller => 'sessions', :action => 'borrow', :type => action_name }, remote: true, id: "formCalendar")
 		div style="padding:10px 20px;"
 			label for="startdate" 開始時間
 			.ui-grid-a
@@ -28,15 +28,16 @@ div data-role="popup" id="popupDialog" data-transition="pop"
 					input type="time" name="endtime" id="input-endtime" class="input-time"/
 			div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
 				span 預約
-				input data-enhanced="true" type="submit"/
+				input data-enhanced="true"data-rel="back"  type="submit"/
 			a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
 
 script
 	= render(:partial => 'borrowpages.js.erb', :handlers => [:erb], :formats => [:js])
 
 sass:
-	h1
+	h2
 		text-align: center
+		line-height: 1em	
 	i
 		color: #fff
 	.ui-grid-a
@@ -47,3 +48,18 @@ sass:
 		border-width: 0px
 		border-radius: 0
 		border-bottom-width: 1px
+	div.fc-row.fc-widget-header
+  		border-bottom: 1px solid #aaa
+  	.fc-unthemed td
+  		border-color: #eee
+  	.fc-axis
+  		border-right: 1px solid #aaa !important
+	.fc-left h2
+		margin: 7px 0
+		padding-left: 10px
+		font-size: 16px
+		font-weight: 500
+	div.fc-time, div.fc-title
+		color: #fff
+		text-shadow: none
+		font-weight: 300

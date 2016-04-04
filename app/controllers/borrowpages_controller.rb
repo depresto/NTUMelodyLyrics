@@ -3,7 +3,6 @@ class BorrowpagesController < ApplicationController
 
 	def room
 		@view = 'agendaWeek'
-		@send_url = ''
 	end
 
 	def book

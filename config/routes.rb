@@ -24,6 +24,9 @@ Rails.application.routes.draw do
   resources :users, only: [:create, :show], path: '/login/user'
 
   resource :session, only: [:create, :destroy]
+  get '/session' => 'sessions#index',  :as => 'session_index'
+  post '/borrow/:type' => 'sessions#borrow'
+
   post '/login/token' => 'sessions#token',  :as => 'token'
 
   # The priority is based upon order of creation: first created -> highest priority.

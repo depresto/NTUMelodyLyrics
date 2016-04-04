@@ -1,4 +1,5 @@
 class LoginToken < ActiveRecord::Base
+	belongs_to :user
 	validates :s_id, presence: true
 	before_save :generate_token
 
@@ -7,17 +8,11 @@ class LoginToken < ActiveRecord::Base
 	end
 
 	def self.authenticate_token(token)
-		#sql = "SELECT s_id FROM login_tokens WHERE token = '#{token}';"
-		#result = ActiveRecord::Base.connection.execute(sql)[0]
-		result = select(:s_id).where(token: token).limit(1)[0]
-		#logger.debug result
-		#sql = "SELECT s_id, name FROM users WHERE s_id = '#{result['s_id']}';"
-		#user = ActiveRecord::Base.connection.execute(sql)[0]
-		result = where(s_id: username).select(:s_id, :name, :password_hash, :password_salt, :isadmin).limit(1)
-		if user.blank?
-			nil
-		else
-			user[0]
-		end
+		username = select(:s_id).where(token: token).order(id: :desc).limit(1)
+		user = User.where(s_id: username).select(:s_id, :name, :password_hash, :password_salt, :isadmin).limit(1).first
+		
+		return if user.blank?
+
+		user
 	end
 end
