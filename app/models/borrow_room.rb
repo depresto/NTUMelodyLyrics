@@ -1,0 +1,2 @@
+class BorrowRoom < Calendar
+end

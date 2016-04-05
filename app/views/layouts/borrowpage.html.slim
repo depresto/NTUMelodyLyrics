@@ -1,4 +1,4 @@
-- @pageclass = 'borrowpage'
+- @pageclass = 'borrowpage borrowpage'+action_name
 
 h2 =content_for(:title)
 
@@ -8,58 +8,84 @@ h2 =content_for(:title)
 
 ul#addButton class="mfb-component--br mfb-slidein" data-mfb-hover=false
 	li class="mfb-component__wrap"
-        a href='#popupDialog' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
+        a href='#popupDialog#{action_name}' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
         	i class="mfb-component__main-icon--resting fa fa-plus"
 
-div data-role="popup" id="popupDialog" data-transition="pop"  data-history="false"
+div data-role="popup" id="popupDialog#{action_name}" data-transition="pop"  data-history="false"
 	= form_tag({:controller => 'sessions', :action => 'borrow', :type => action_name }, remote: true, id: "formCalendar")
 		div style="padding:10px 20px;"
-			label for="startdate" 開始時間
-			.ui-grid-a
-				.ui-block-a
-					input type="date" name="startdate" id="input-startdate" class="input-date"/
-				.ui-block-b
-					input type="time" name="starttime" id="input-starttime" class="input-time"/
-			label for="enddate" 結束時間
-			.ui-grid-a
-				.ui-block-a
-					input type="date" name="enddate" id="input-enddate" class="input-date"/
-				.ui-block-b
-					input type="time" name="endtime" id="input-endtime" class="input-time"/
-			div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
-				span 預約
-				input data-enhanced="true"data-rel="back"  type="submit"/
+			= yield :dialog
 			a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
 
-script
-	= render(:partial => 'borrowpages.js.erb', :handlers => [:erb], :formats => [:js])
+javascript:
+	$(document).on('pageshow', '.borrowpage#{action_name}', function(e, data){
+		$('.borrowpage#{action_name} #calendar').fullCalendar({
+			editable: false, //Don't allow editing of events
+			events: '/getevent/#{action_name}',
+			defaultView: '#{@view}', //Only show week view
+			handleWindowResize: true,
+			nowIndicator: true,
+			allDaySlot: false,
+			titleFormat: {
+				month: 'YYYY/MM',
+				week: 'YYYY/MM/DD', 
+				day: 'YYYY/MM/DD dddd'
+			},
+			columnFormat: {
+			    week: 'ddd' // Only show day of the week names
+			},
+			minTime: '08:00:00', // Start time for the calendar
+			maxTime: '22:00:00', //End time for the calendar
+			displayEventTime: true, // Display event time
+			height: 'auto',
+			dayClick: function(date, jsEvent, view) {
+				$(".input-date").val(date.format('YYYY-MM-DD'));
+				$("#input-starttime").val(date.format('HH:mm'));
+				$("#input-endtime").val(date.add(1, 'h').format('HH:mm'));
+
+				$('#popupDialog').popup('open');
+			}
+		});
+
+		datetime = $('#calendar').fullCalendar('getDate');
+
+		$(".input-date").val(datetime.format('YYYY-MM-DD'));
+		$("#input-starttime").val(datetime.format('HH:mm'));
+		$("#input-endtime").val(datetime.add(1, 'h').format('HH:mm'));
+
+		$('#formCalendar').submit(function(){
+			$('#popupDialog').popup("close");
+		});
+	});
+
 
 sass:
-	h2
-		text-align: center
-		line-height: 1em	
-	i
-		color: #fff
-	.ui-grid-a
-		width: 90%
-	.ui-input-text
-		width: 200px
-		box-shadow: none
-		border-width: 0px
-		border-radius: 0
-		border-bottom-width: 1px
-	div.fc-row.fc-widget-header
-  		border-bottom: 1px solid #aaa
-  	.fc-unthemed td
-  		border-color: #eee
-  	.fc-axis
-  		border-right: 1px solid #aaa !important
-	.fc-left h2
-		margin: 7px 0
-		padding-left: 10px
-		font-size: 16px
-		font-weight: 500
-	div.fc-time, div.fc-title
-		color: #fff
-		text-shadow: none
-		font-weight: 300
+	.borrowpage
+		h2
+			text-align: center
+			line-height: 1em	
+		i
+			color: #fff
+		.ui-grid-a
+			width: 90%
+		.ui-input-text
+			width: 200px
+			box-shadow: none
+			border-width: 0px
+			border-radius: 0
+			border-bottom-width: 1px
+		div.fc-row.fc-widget-header
+	  		border-bottom: 1px solid #aaa
+	  	.fc-unthemed td
+	  		border-color: #eee
+	  	.fc-axis
+	  		border-right: 1px solid #aaa !important
+		.fc-left h2
+			margin: 7px 0
+			padding-left: 10px
+			font-size: 16px
+			font-weight: 500
+		div.fc-time, div.fc-title, span.fc-time, span.fc-title
+			color: #fff
+			text-shadow: none
+			font-weight: 300

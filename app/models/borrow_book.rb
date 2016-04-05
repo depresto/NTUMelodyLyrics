@@ -1,0 +1,2 @@
+class BorrowBook < Calendar
+end

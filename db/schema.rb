@@ -11,28 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160403110643) do
+ActiveRecord::Schema.define(version: 20160405102732) do
 
   create_table "calendars", force: :cascade do |t|
-    t.integer "c_id",        null: false
-    t.string  "title",       null: false
-    t.integer "starttime",   null: false
-    t.integer "endtime",     null: false
-    t.boolean "allday"
-    t.string  "color"
-    t.string  "type"
-    t.integer "borrow_p_id"
+    t.string   "title",               null: false
+    t.datetime "start",               null: false
+    t.datetime "end",                 null: false
+    t.boolean  "allday"
+    t.string   "color"
+    t.string   "type"
+    t.integer  "schedule_content_id"
   end
 
   create_table "club_properties", force: :cascade do |t|
-    t.integer "p_id",                       null: false
     t.string  "name",                       null: false
     t.boolean "borrowable", default: false
+    t.string  "type"
+    t.integer "user_id"
+    t.date    "deadline"
   end
 
   create_table "login_tokens", force: :cascade do |t|
     t.string "s_id"
     t.string "token"
+  end
+
+  create_table "schedule_contents", force: :cascade do |t|
+    t.integer "calendar_id", null: false
+    t.string  "content",     null: false
   end
 
   create_table "users", force: :cascade do |t|

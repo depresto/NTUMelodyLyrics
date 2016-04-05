@@ -14,20 +14,21 @@ Rails.application.routes.draw do
   end
 
   scope '/borrow' do
-    get '/room'   => 'borrowpages#room', :as => 'borrowroom'
-    get '/book'   => 'borrowpages#book', :as => 'borrowbook'
-    get '/keyboard'   => 'borrowpages#keyboard', :as => 'borrowkeyboard'
+    get '/room'           => 'borrowpages#room',      :as => 'borrowroom'
+    get '/book'           => 'borrowpages#book',      :as => 'borrowbook'
+    get '/keyboard'       => 'borrowpages#keyboard',  :as => 'borrowkeyboard'
   end
 
-  get '/calendar'   => 'borrowpages#calendar', :as => 'calendar'
+  get   '/calendar'       => 'borrowpages#calendar',  :as => 'calendar'
 
   resources :users, only: [:create, :show], path: '/login/user'
 
   resource :session, only: [:create, :destroy]
-  get '/session' => 'sessions#index',  :as => 'session_index'
-  post '/borrow/:type' => 'sessions#borrow'
+  get   '/session'        => 'sessions#index',  :as => 'session_index'
+  post  '/borrow/:type'   => 'sessions#borrow'
+  get   '/getevent/:type' => 'sessions#getevent'
 
-  post '/login/token' => 'sessions#token',  :as => 'token'
+  post  '/login/token'    => 'sessions#token',  :as => 'token'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

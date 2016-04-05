@@ -1,5 +1,27 @@
 - title '社團行事曆'
-=render template: "layouts/borrowpage"
+- @view = 'month'
+= content_for :dialog
+	label for="title" 標題
+	input type="text" name="title" id="input-title"/
+	label for="content" 內容
+	textarea name="content" id="input-content"
+	label for="startdate" 開始時間
+	.ui-grid-a
+		.ui-block-a
+			input type="date" name="startdate" id="input-startdate" class="input-date"/
+		.ui-block-b
+			input type="time" name="starttime" id="input-starttime" class="input-time"/
+	label for="enddate" 結束時間
+	.ui-grid-a
+		.ui-block-a
+			input type="date" name="enddate" id="input-enddate" class="input-date"/
+		.ui-block-b
+			input type="time" name="endtime" id="input-endtime" class="input-time"/
+	div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
+		span 新增活動
+		input data-enhanced="true"data-rel="back"  type="submit"/
+
+= render template: "layouts/borrowpage"
 
 - if !session[:isadmin]
 	sass:
