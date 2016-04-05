@@ -21,6 +21,10 @@
 		span 新增活動
 		input data-enhanced="true"data-rel="back"  type="submit"/
 
+= content_for :eventdialog
+	h2 id="#{action_name}-dialog-title"
+	p id="#{action_name}-dialog-content"
+
 = render template: "layouts/borrowpage"
 
 - if !session[:isadmin]

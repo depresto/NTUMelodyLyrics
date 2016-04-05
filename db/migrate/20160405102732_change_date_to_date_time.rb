@@ -3,9 +3,9 @@ class ChangeDateToDateTime < ActiveRecord::Migration
   	remove_column :calendars, :startdate
   	remove_column :calendars, :enddate
 
-  	change_column :calendars, :starttime, :datetime
-  	change_column :calendars, :endtime, :datetime
-  	rename_column :calendars, :starttime, :start
-  	rename_column :calendars, :endtime, :end
+  	remove_column :calendars, :starttime
+  	remove_column :calendars, :endtime
+  	add_column :calendars, :start, :datetime
+  	add_column :calendars, :end, :datetime
   end
 end
