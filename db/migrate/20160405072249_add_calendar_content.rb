@@ -5,7 +5,9 @@ class AddCalendarContent < ActiveRecord::Migration
   		t.string 	:content,		null: false
   	end
 
-  	change_column :club_properties, :borrow_s_id, :integer
-  	rename_column :club_properties, :borrow_s_id, :user_id
+  	#change_column :club_properties, :borrow_s_id, :integer
+  	remove_column :club_properties, :borrow_s_id
+  	#rename_column :club_properties, :borrow_s_id, :user_id
+  	add_column :club_properties, :user_id, :integer
   end
 end
