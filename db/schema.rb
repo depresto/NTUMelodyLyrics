@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405102732) do
+ActiveRecord::Schema.define(version: 20160411124100) do
 
   create_table "calendars", force: :cascade do |t|
     t.string   "title",               null: false
@@ -29,6 +29,12 @@ ActiveRecord::Schema.define(version: 20160405102732) do
     t.string  "type"
     t.integer "user_id"
     t.date    "deadline"
+    t.integer "image_id"
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "hash", null: false
   end
 
   create_table "login_tokens", force: :cascade do |t|

@@ -18,9 +18,15 @@ div data-role="popup" id="popupDialog-#{action_name}" data-transition="pop"  dat
 			a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
 
 div data-role="popup" id="popupEvent-#{action_name}" data-transition="pop"  data-history="false"
-	= yield :eventdialog
-	p id="#{action_name}-dialog-start"
-	p id="#{action_name}-dialog-end"
+	div style="padding:10px 20px;"
+		h2 id="#{action_name}-dialog-title"
+		= yield :eventdialog
+		p id="#{action_name}-dialog-start" 
+			| 開始時間：
+			span 
+		p id="#{action_name}-dialog-end" 
+			| 結束時間：
+			span  
 
 javascript:
 	$(document).on('pageshow', '.borrowpage#{action_name}', function(e, data){
@@ -51,7 +57,11 @@ javascript:
 				$('#popupDialog-#{action_name}').popup('open');
 			},
 			eventClick: function(calEvent, jsEvent, view){
+				$("##{action_name}-dialog-title").text("#{'借用人：' if action_name == 'room'}"+calEvent.title);
+				$("##{action_name}-dialog-start span").text(calEvent.start.format('YYYY-MM-DD HH:mm'));
+				$("##{action_name}-dialog-end span").text(calEvent.end.format('YYYY-MM-DD HH:mm'));
 				console.log("event");
+				$('#popupEvent-#{action_name}').popup('open');
 			}
 		});
 

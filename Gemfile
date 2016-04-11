@@ -47,6 +47,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Heroku server
 gem 'puma'
 
+# Imgur Image
+gem 'imgurapi'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
