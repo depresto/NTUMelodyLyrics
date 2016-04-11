@@ -6,10 +6,11 @@ h2 =content_for(:title)
 
 #calendar
 
-ul#addButton class="mfb-component--br mfb-slidein" data-mfb-hover=false
-	li class="mfb-component__wrap"
-        a href='#popupDialog-#{action_name}' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
-        	i class="mfb-component__main-icon--resting fa fa-plus"
+- if session[:isadmin] || action_name == 'room'
+	ul#addButton class="mfb-component--br mfb-slidein" data-mfb-hover=false
+		li class="mfb-component__wrap"
+	        a href='#popupDialog-#{action_name}' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
+	        	i class="mfb-component__main-icon--resting fa fa-plus"
 
 div data-role="popup" id="popupDialog-#{action_name}" data-transition="pop"  data-history="false"
 	= form_tag({:controller => 'sessions', :action => 'borrow', :type => action_name }, remote: true, id: "formCalendar")

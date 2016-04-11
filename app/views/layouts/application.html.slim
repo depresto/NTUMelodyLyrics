@@ -23,5 +23,7 @@ html.no-js lang="zh-Hant-TW"
     = javascript_include_tag "application"
     div data-role="page" class="main" class=@pageclass
       = bg_header
-      == yield
+      div data-role="content"
+        == yield
+      == yield :footer
     

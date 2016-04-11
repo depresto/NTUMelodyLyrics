@@ -1,0 +1,72 @@
+- @pageclass = 'borrowlist borrowlist'+action_name
+
+h2 =content_for(:title)
+
+ul data-role="listview" data-filter="true" data-split-theme="a" data-split-icon="check"
+	li data-role="list-divider" role="heading" 
+		| 項目
+		span.ui-li-aside 借用
+	li 
+		a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
+			img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
+			h2 test
+			p 已經有 1 人借用
+			input type="checkbox" name="borrow#{action_name}"
+			a.check-button
+
+div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="pop"  data-history="false"
+	div style="padding:10px 20px;"
+		h2 id="#{action_name}-dialog-name" test
+		img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
+		p id="#{action_name}-dialog-discription" 這是社產
+
+		a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
+
+
+= content_for :footer
+	div data-role="footer" data-position="fixed" data-theme="a"
+		div.ui-grid-b
+			input type="submit" value="預約" data-theme="b"
+
+javascript:
+	$(document).on('pageshow', '.borrowlist#{action_name}', function(e, data){
+		var checked = [];
+		$('.check-button').click(function() {
+			checkbox = $(this).siblings('.ui-btn').children('.ui-checkbox').children('input');
+			if (!checkbox.prop('checked')) {
+				$(this).buttonMarkup({theme: 'b'});
+				$(this).find('span.ui-btn').buttonMarkup({
+					theme: 'b'
+				});
+				checkbox.prop('checked',true);
+			} else {
+				$(this).buttonMarkup({theme: 'a'});
+				$(this).find('span.ui-btn').buttonMarkup({
+					theme: 'a'
+				});
+				checkbox.prop('checked',false);
+			}
+		});
+	});
+
+sass:
+	.borrowlist
+		.ui-content 
+			> h2
+				text-align: center
+				line-height: 1em	
+		.ui-footer
+			.ui-grid-b
+				text-align: center
+			.ui-btn
+				width: 80%
+				margin: 10px auto
+		.popupItem
+			h2
+				text-align: center
+			img
+				width: 100%
+	ul
+		li a
+			input[type="checkbox"]
+				display: none

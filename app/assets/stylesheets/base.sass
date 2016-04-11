@@ -11,6 +11,8 @@
 	img
 		width: 100%
 		max-width: 200px
+.ui-content
+	padding: 0
 .ui-header .ui-btn, .ui-header .ui-icon, .ui-header .ui-btn-inner
 	margin-top: 15px
 .main
@@ -23,12 +25,23 @@
 			color: red
 	#info_message
 		text-align: center
+.ui-listview .ui-li-aside
+	top: 0.5em
+	right: 6px
+@media all and (max-width: 36em) 
+	.ui-content .ui-listview
+		margin: 0
 		
 @media all and (min-width: 36em)
-	.ui-grid-a, .ui-content
+	.ui-grid-a, .ui-grid-b
 		width: 70%
-		max-width: 500px
 		margin: 0 auto
+	.ui-grid-a
+		max-width: 500px
+	.ui-content
+		width: 70%
+		margin: 0 auto
+		padding: 16px
 	.ui-header .ui-btn, .ui-header .ui-icon, .ui-header .ui-btn-inner
 		margin-right: 20px
 	#user_bar
