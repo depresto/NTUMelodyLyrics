@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+	before_filter :authenticate_user, :only => :main
 
 	def init
 		@cookies = cookies.signed[:user_id]
@@ -18,13 +19,16 @@ class PagesController < ApplicationController
 	end
 
 	def login
+		if (session[:user_name])
+			redirect_to main_url
+		end
 	end
 
 	def main
 	end
 
 	def letsencrypt
-	    # use your code here, not mine
-	    render text: "5m5pBJyy-AeiPGDX0B4jrQoOkhLSyxXbMIeO2CiQBJ0.p57ZLZ406Ggm-wkRG9LthZMsJF5J0g_x-c_o6l0U2nw"
+	    # use your code here
+	    render text: ""
 	  end
 end

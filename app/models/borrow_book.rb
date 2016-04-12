@@ -1,2 +1,2 @@
-class BorrowBook < Calendar
+class BorrowBook < ClubProperty
 end

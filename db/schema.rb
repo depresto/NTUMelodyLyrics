@@ -11,16 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160411124100) do
+ActiveRecord::Schema.define(version: 20160412165917) do
 
   create_table "calendars", force: :cascade do |t|
-    t.string   "title",               null: false
-    t.datetime "start",               null: false
-    t.datetime "end",                 null: false
+    t.string   "title",  null: false
+    t.datetime "start",  null: false
+    t.datetime "end",    null: false
     t.boolean  "allday"
     t.string   "color"
     t.string   "type"
-    t.integer  "schedule_content_id"
   end
 
   create_table "club_properties", force: :cascade do |t|
@@ -43,8 +42,8 @@ ActiveRecord::Schema.define(version: 20160411124100) do
   end
 
   create_table "schedule_contents", force: :cascade do |t|
-    t.integer "calendar_id", null: false
     t.string  "content",     null: false
+    t.integer "schedule_id", null: false
   end
 
   create_table "users", force: :cascade do |t|

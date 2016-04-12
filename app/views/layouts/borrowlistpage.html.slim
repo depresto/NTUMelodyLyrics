@@ -2,17 +2,20 @@
 
 h2 =content_for(:title)
 
-ul data-role="listview" data-filter="true" data-split-theme="a" data-split-icon="check"
-	li data-role="list-divider" role="heading" 
-		| 項目
-		span.ui-li-aside 借用
-	li 
-		a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
-			img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
-			h2 test
-			p 已經有 1 人借用
-			input type="checkbox" name="borrow#{action_name}"
-			a.check-button
+form action=""
+	ul data-role="listview" data-filter="true" data-split-theme="a" data-split-icon="check"
+		li data-role="list-divider" role="heading" 
+			| 項目
+			span.ui-li-aside 借用
+		li 
+			a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
+				img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
+				h2 test
+				p 已經有 1 人借用
+				input type="checkbox" name="borrow#{action_name}"
+				a.check-button
+	div.hidden 
+		input id="submit-form-#{action_name}" type="submit" 
 
 div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="pop"  data-history="false"
 	div style="padding:10px 20px;"
@@ -26,7 +29,7 @@ div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="p
 = content_for :footer
 	div data-role="footer" data-position="fixed" data-theme="a"
 		div.ui-grid-b
-			input type="submit" value="預約" data-theme="b"
+			a href="#" data-role="button" data-theme="b" onclick="$('#submit-form-#{action_name}').click();" 預約
 
 javascript:
 	$(document).on('pageshow', '.borrowlist#{action_name}', function(e, data){
@@ -70,3 +73,5 @@ sass:
 		li a
 			input[type="checkbox"]
 				display: none
+	.hidden
+		display: none

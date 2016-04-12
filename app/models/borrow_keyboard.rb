@@ -1,2 +1,2 @@
-class BorrowKeyboard < Calendar
+class BorrowKeyboard < ClubProperty
 end
