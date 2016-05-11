@@ -1,5 +1,5 @@
-$(document).on('pageshow', '.borrowpage<%=action_name%>', function(e, data){
-	$('.borrowpage<%=action_name%> #calendar').fullCalendar({
+$(document).on('pageshow', '#borrowpage<%=action_name%>', function(e, data){
+	$('#borrowpage<%=action_name%> #calendar').fullCalendar({
 		editable: false, //Don't allow editing of events
 		events: '/getevent/<%=action_name%>',
 		defaultView: '<%=@view%>', //Only show week view
@@ -18,29 +18,36 @@ $(document).on('pageshow', '.borrowpage<%=action_name%>', function(e, data){
 		maxTime: '22:00:00', //End time for the calendar
 		displayEventTime: true, // Display event time
 		height: 'auto',
+		<% if action_name == 'room' || session[:isadmin] %>
 		dayClick: function(date, jsEvent, view) {
 			$(".input-date").val(date.format('YYYY-MM-DD'));
-			$("#input-starttime").val(date.format('HH:mm'));
-			$("#input-endtime").val(date.add(1, 'h').format('HH:mm'));
+			$("#<%=action_name%>-input-starttime").val(date.format('HH:mm'));
+			$("#<%=action_name%>-input-endtime").val(date.add(1, 'h').format('HH:mm'));
 
 			$('#popupDialog-<%=action_name%>').popup('open');
 		},
+		<% end %>
 		eventClick: function(calEvent, jsEvent, view){
 			$("#<%=action_name%>-dialog-title").text("<%='借用人：' if action_name == 'room'%>"+calEvent.title);
 			$("#<%=action_name%>-dialog-start span").text(calEvent.start.format('YYYY-MM-DD HH:mm'));
 			$("#<%=action_name%>-dialog-end span").text(calEvent.end.format('YYYY-MM-DD HH:mm'));
+			$("#<%=action_name%>-event-id").text(calEvent.id);
 			<% if action_name == 'calendar' %>
-				$("#<%=action_name%>-dialog-content span").text(calEvent.content);
+			$("#<%=action_name%>-dialog-content").text(calEvent.content);
+			<% elsif action_name == 'room' %>
+			if (calEvent.title !== "<%=session[:user_name]%>") {
+				$("#<%=action_name%>-event-cancel").hide();
+			}
 			<% end%>
 			$('#popupEvent-<%=action_name%>').popup('open');
 		}
 	});
 
-	datetime = $('#calendar').fullCalendar('getDate');
+	datetime = $('#borrowpage<%=action_name%> #calendar').fullCalendar('getDate');
 
 	$(".input-date").val(datetime.format('YYYY-MM-DD'));
-	$("#input-starttime").val(datetime.format('HH:mm'));
-	$("#input-endtime").val(datetime.add(1, 'h').format('HH:mm'));
+	$("#<%=action_name%>-input-starttime").val(datetime.add(1, 'h').format('HH:00'));
+	$("#<%=action_name%>-input-endtime").val(datetime.add(1, 'h').format('HH:00'));
 
 	$('#formCalendar').submit(function(){
 		$('#popupDialog-<%=action_name%>').popup("close");

@@ -1,4 +1,5 @@
-- @pageclass = 'borrowlist borrowlist'+action_name
+- @pageclass 	= 'borrowlist'
+- @pageid 		= 'borrowlist'+action_name
 
 h2 =content_for(:title)
 
@@ -12,18 +13,18 @@ form action=""
 				img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
 				h2 test
 				p 已經有 1 人借用
-				input type="checkbox" name="borrow#{action_name}"
+				input.hide type="checkbox" name="borrow#{action_name}"
 				a.check-button
-	div.hidden 
+	div.hide 
 		input id="submit-form-#{action_name}" type="submit" 
 
 div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="pop"  data-history="false"
 	div style="padding:10px 20px;"
-		h2 id="#{action_name}-dialog-name" test
+		h2 	id="#{action_name}-dialog-name" test
 		img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
-		p id="#{action_name}-dialog-discription" 這是社產
+		p 	id="#{action_name}-dialog-discription" 這是社產
 
-		a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
+		a 	href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
 
 
 = content_for :footer
@@ -32,8 +33,8 @@ div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="p
 			a href="#" data-role="button" data-theme="b" onclick="$('#submit-form-#{action_name}').click();" 預約
 
 javascript:
-	$(document).on('pageshow', '.borrowlist#{action_name}', function(e, data){
-		var checked = [];
+	$(document).on('pageshow', '#borrowlist#{action_name}', function(e, data){
+
 		$('.check-button').click(function() {
 			checkbox = $(this).siblings('.ui-btn').children('.ui-checkbox').children('input');
 			if (!checkbox.prop('checked')) {
@@ -73,5 +74,3 @@ sass:
 		li a
 			input[type="checkbox"]
 				display: none
-	.hidden
-		display: none

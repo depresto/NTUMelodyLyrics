@@ -8,21 +8,34 @@
 	label for="startdate" 開始時間
 	.ui-grid-a
 		.ui-block-a
-			input type="date" name="startdate" id="input-startdate" class="input-date"/
+			input type="date" name="startdate" id="#{action_name}-input-startdate" class="input-date"/
 		.ui-block-b
-			input type="time" name="starttime" id="input-starttime" class="input-time"/
+			input type="time" name="starttime" id="#{action_name}-input-starttime" class="input-time"/
 	label for="enddate" 結束時間
 	.ui-grid-a
 		.ui-block-a
-			input type="date" name="enddate" id="input-enddate" class="input-date"/
+			input type="date" name="enddate" id="#{action_name}-input-enddate" class="input-date"/
 		.ui-block-b
-			input type="time" name="endtime" id="input-endtime" class="input-time"/
+			input type="time" name="endtime" id="#{action_name}-input-endtime" class="input-time"/
 	div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
 		span 新增活動
-		input data-enhanced="true"data-rel="back"  type="submit"/
+		input data-enhanced="true" data-rel="back"  type="submit"/
 
 = content_for :eventdialog
-	p id="#{action_name}-dialog-content"
-		span
+	- if session[:isadmin]
+		a id="#{action_name}-event-cancel" data-role="button" data-theme="b" href="#" data-rel="back" 取消活動
+	a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
 
 = render template: "layouts/borrowpage"
+
+sass:
+	.dialog-event-content
+		white-space: pre-wrap
+
+script
+	- if session[:isadmin]
+	|	$('##{action_name}-event-cancel').click(function(){
+	|		event_id = $('##{action_name}-event-id').text();
+	|		$.post("/delevent/#{action_name}",{"id": event_id});
+	|		$('#borrowpage#{action_name} #calendar').fullCalendar('removeEvents',event_id);
+	|	});

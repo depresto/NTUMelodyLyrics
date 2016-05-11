@@ -16,6 +16,7 @@
 #= require jquery
 #= require jquery.turbolinks
 #= require jquery_ujs
+#= require jquery.remotipart
 #= require jquery.mobile
 #= require moment/min/moment.min
 #= require material-floating-button/dist/mfb

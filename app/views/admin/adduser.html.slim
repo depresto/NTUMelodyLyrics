@@ -1,7 +1,8 @@
 - title '新增使用者'
+- @pageid = 'page-adduser'
 
 div#adduser_main role="main" class="ui-content" 
-	h3 新增使用者
+	h3 =content_for(:title)
 
 	= form_for(User.new, remote: true, :html => { :id => 'adduser_form'}) do |f|
 		= f.label :name, '姓名'
@@ -17,17 +18,19 @@ div#adduser_main role="main" class="ui-content"
 			b
 coffee:
 	$('#adduser_form').on('ajax:success' , (e, data, status, xhr) ->
-		console.log data
+
 		if (data.success)
 			$('#error_message').text(data.msg)
+			$('#adduser_form input').val('')
 		else
 			$('#error_message').text(data.msg)
 			
+
 	).on 'ajax:error' , (e, xhr, status, error) ->
 		console.error status+' : '+xhr.responseJSON.msg
 		$('#error_message b').text(xhr.responseJSON.msg)
 javascript:
-	$(document).ready(function() {
+	$(document).on('pageshow', '#page-adduser',function(e, data) {
 		var form = document.getElementById('adduser_form');
 		form.noValidate = true;
 		form.addEventListener('submit', function(event) { // listen for form submitting

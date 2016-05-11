@@ -23,4 +23,14 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  def is_admin?
+    if (!session[:isadmin])
+      redirect_to main_url
+    else
+      nil
+    end
+  end
+
+  helper_method :is_admin?
+
 end

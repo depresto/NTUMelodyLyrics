@@ -1,8 +1,3 @@
-$('#calendar').fullCalendar('renderEvent', {
-	title: '<%= @title%>',
-	start: "<%= params[:startdate]%>T<%= params[:starttime]%>:00",
-	end: "<%= params[:enddate]%>T<%= params[:endtime]%>:00",
-	allDay: false
-}, 'stick');
+$('#calendar').fullCalendar( 'refetchEvents' );
 
 console.log("<%= @status%>");

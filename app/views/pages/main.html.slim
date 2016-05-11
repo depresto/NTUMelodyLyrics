@@ -22,10 +22,15 @@ h3#user_bar
 		= link_to(borrowkeyboard_path, 'data-role': 'button')
 			br/
 			= fa_icon "music 5x"
-			p 社琴借用
+			p 樂器借用
 	- if session[:isadmin] == true
 		.ui-block-a 
 			= link_to(adduser_path, 'data-role': 'button')
 				br/
 				= fa_icon "user-plus 5x"
 				p 新增會員
+		.ui-block-b
+			= link_to(property_path, 'data-role': 'button')
+				br/
+				= fa_icon "plus-circle 5x"
+				p 新增器材

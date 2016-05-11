@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   # Same as:
   # get :init, :login, :main, controller: :pages
   scope 'admin' do
-    get '/adduser' => 'admin#adduser', :as => 'adduser'
+    get '/adduser'      => 'admin#adduser',     :as => 'adduser'
+    get '/property'  => 'admin#property', :as => 'property'
   end
+
+  post  '/addproperty'    => 'admin#addproperty'
 
   scope '/borrow' do
     get '/room'           => 'borrowpages#room',      :as => 'borrowroom'
@@ -27,6 +30,7 @@ Rails.application.routes.draw do
   get   '/session'        => 'sessions#index',  :as => 'session_index'
   post  '/borrow/:type'   => 'sessions#borrow'
   get   '/getevent/:type' => 'sessions#getevent'
+  post  '/delevent/:type' => 'sessions#delevent'
 
   post  '/login/token'    => 'sessions#token',  :as => 'token'
 

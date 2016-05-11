@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-  	@user = User.authenticate(params[:username], params[:password], params[:remember])
+    @user = User.authenticate(params[:username], params[:password], params[:remember])
     if @user 
       session[:user_name] = @user['name']
       session[:isadmin] = @user['isadmin']
@@ -26,12 +26,12 @@ class SessionsController < ApplicationController
       #logger.debug @message 
     end
 
-  	respond_to do |format|
+    respond_to do |format|
       format.js {
         flash[:notice] = @message
         render :template => 'create.js.erb'
       }
-  	end
+    end
   end
 
   def destroy
@@ -81,6 +81,7 @@ class SessionsController < ApplicationController
         schedule              = ScheduleContent.new
         schedule.schedule_id  = event.id
         schedule.content      = params[:content]
+        @content = params[:content].html_safe
         schedule.save!
       end
     end
@@ -107,5 +108,24 @@ class SessionsController < ApplicationController
     @result = nil unless event
 
     render json: @result
+  end
+
+  def delevent 
+
+    case params[:type]
+      when 'room'
+        event = BorrowRoom.exists?(id: params[:id], title: session[:user_name])
+        # Destroy borrow event if user match the event
+        @success = BorrowRoom.destroy(params[:id]) ? true : false if event 
+      when 'calendar'
+        # Destory Events if user is admin
+        if session[:isadmin]
+          @success = Schedule.destroy(params[:id]) ? true : false
+        else
+          @success = false
+        end
+      when 'keyboard'
+      when 'book'
+    end
   end
 end

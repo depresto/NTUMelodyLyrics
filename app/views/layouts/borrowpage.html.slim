@@ -1,4 +1,5 @@
-- @pageclass = 'borrowpage borrowpage'+action_name
+- @pageclass 	= 'borrowpage'
+- @pageid 		= 'borrowpage'+action_name
 
 h2 =content_for(:title)
 
@@ -7,13 +8,10 @@ h2 =content_for(:title)
 #calendar
 
 - if session[:isadmin] || action_name == 'room'
-	ul#addButton class="mfb-component--br mfb-slidein" data-mfb-hover=false
-		li class="mfb-component__wrap"
-	        a href='#popupDialog-#{action_name}' class="mfb-component__button--main" data-rel="popup" data-position-to="window"
-	        	i class="mfb-component__main-icon--resting fa fa-plus"
+	=render 'partials/btn_float', :btn_link => "#popupDialog-#{action_name}"
 
 div data-role="popup" id="popupDialog-#{action_name}" data-transition="pop"  data-history="false"
-	= form_tag({:controller => 'sessions', :action => 'borrow', :type => action_name }, remote: true, id: "formCalendar")
+	= form_tag({:controller => 'sessions', :action => 'borrow', :type => action_name }, :html => { :multipart => true }, remote: true, id: "formCalendar")
 		div style="padding:10px 20px;"
 			= yield :dialog
 			a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消
@@ -21,13 +19,17 @@ div data-role="popup" id="popupDialog-#{action_name}" data-transition="pop"  dat
 div data-role="popup" id="popupEvent-#{action_name}" data-transition="pop"  data-history="false"
 	div style="padding:10px 20px;"
 		h2 id="#{action_name}-dialog-title"
-		= yield :eventdialog
+		- if action_name == 'calendar'
+			p.dialog-event-content id="#{action_name}-dialog-content"
+
 		p.dialog-event-time id="#{action_name}-dialog-start" 
 			| 開始時間：
 			span 
 		p.dialog-event-time id="#{action_name}-dialog-end" 
 			| 結束時間：
 			span  
+		= yield :eventdialog
+		span.hide id="#{action_name}-event-id"
 script
 	=render :partial => 'layouts/borrowpage.js.erb'
 

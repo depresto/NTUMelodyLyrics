@@ -41,11 +41,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "js-routes"
 
+gem 'remotipart', github: 'mshibuya/remotipart', ref: '3a6acb3'
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
 # Heroku server
 gem 'puma'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Imgur Image
 gem 'imgurapi'
@@ -77,6 +81,8 @@ end
 
 group :production do
   gem 'pg'
+
+  # gem 'rack-cache', :require => 'rack/cache'
 
   gem 'rails_12factor'
 end

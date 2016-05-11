@@ -2,7 +2,7 @@
 /!- description ''
 
 div#login_main role="main" class="ui-content" 
-	h3 登入
+	h3 =content_for(:title)
 
 	= form_tag( session_path, remote: true, id: 'login_form')
 		label for="username"  學號
