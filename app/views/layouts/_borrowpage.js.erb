@@ -1,7 +1,7 @@
 $(document).on('pageshow', '#borrowpage<%=action_name%>', function(e, data){
 	$('#borrowpage<%=action_name%> #calendar').fullCalendar({
 		editable: false, //Don't allow editing of events
-		events: '/getevent/<%=action_name%>',
+		events: '/event?type=<%=action_name%>',
 		defaultView: '<%=@view%>', //Only show week view
 		handleWindowResize: true,
 		nowIndicator: true,

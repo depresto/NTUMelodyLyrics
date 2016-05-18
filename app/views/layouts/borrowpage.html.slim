@@ -11,7 +11,7 @@ h2 =content_for(:title)
 	=render 'partials/btn_float', :btn_link => "#popupDialog-#{action_name}"
 
 div data-role="popup" id="popupDialog-#{action_name}" data-transition="pop"  data-history="false"
-	= form_tag({:controller => 'sessions', :action => 'borrow', :type => action_name }, :html => { :multipart => true }, remote: true, id: "formCalendar")
+	= form_tag({:controller => 'events', :action => 'create', :type => action_name }, :html => { :multipart => true }, remote: true, id: "formCalendar")
 		div style="padding:10px 20px;"
 			= yield :dialog
 			a href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 取消

@@ -5,9 +5,11 @@ class BorrowpagesController < ApplicationController
 	end
 
 	def book
+		@property = BorrowBook.all
 	end
 
 	def keyboard
+		@property = BorrowKeyboard.all
 	end
 
 	def calendar

@@ -41,7 +41,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem "js-routes"
 
-gem 'remotipart', github: 'mshibuya/remotipart', ref: '3a6acb3'
+gem 'remotipart'
+#gem 'remotipart', github: 'mshibuya/remotipart', ref: '3a6acb3'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
@@ -51,8 +52,22 @@ gem 'puma'
 
 gem 'dotenv-rails', :groups => [:development, :test]
 
+# File upload
+gem 'carrierwave'
+# Cloudinary Cdn
+gem 'cloudinary'
 # Imgur Image
-gem 'imgurapi'
+# gem 'imgurapi'
+# gem 'ruby-imgur'
+
+# File upload
+# gem "paperclip", "~> 5.0.0.beta1"
+# PaperClip for Imgur
+# gem 'paperclip-imgur'
+
+# PaperClip for Google Drive
+# gem 'paperclip-googledrive'
+# gem 'paperclip-googledrive-new'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -1,3 +1,5 @@
 class ClubProperty < ActiveRecord::Base
-	has_one :image, :dependent => :destroy
+	validates_presence_of :name, :borrowable
+
+	mount_uploader :image, ImageUploader
 end

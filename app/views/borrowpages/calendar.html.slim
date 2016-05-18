@@ -2,9 +2,9 @@
 - @view = 'month'
 = content_for :dialog
 	label for="title" 標題
-	input type="text" name="title" id="input-title"/
+	input type="text" name="title" id="input-title" required="true"/
 	label for="content" 內容
-	textarea name="content" id="input-content"
+	textarea name="content" id="input-content" required="true"
 	label for="startdate" 開始時間
 	.ui-grid-a
 		.ui-block-a
@@ -36,6 +36,13 @@ script
 	- if session[:isadmin]
 	|	$('##{action_name}-event-cancel').click(function(){
 	|		event_id = $('##{action_name}-event-id').text();
-	|		$.post("/delevent/#{action_name}",{"id": event_id});
+	|		$.ajax({
+	|			url: 'event',
+	|			type: 'DELETE',
+	|			data: {
+	|				"id": event_id,
+	|				"type": "#{action_name}"
+	|			}
+	|		});
 	|		$('#borrowpage#{action_name} #calendar').fullCalendar('removeEvents',event_id);
 	|	});

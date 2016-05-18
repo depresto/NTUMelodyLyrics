@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # resources :images
   root 'pages#init'
 
   # Let's encrypt
@@ -11,10 +12,8 @@ Rails.application.routes.draw do
   # get :init, :login, :main, controller: :pages
   scope 'admin' do
     get '/adduser'      => 'admin#adduser',     :as => 'adduser'
-    get '/property'  => 'admin#property', :as => 'property'
+    resources :club_properties, only: [:index, :create, :update, :destroy]
   end
-
-  post  '/addproperty'    => 'admin#addproperty'
 
   scope '/borrow' do
     get '/room'           => 'borrowpages#room',      :as => 'borrowroom'
@@ -24,13 +23,9 @@ Rails.application.routes.draw do
 
   get   '/calendar'       => 'borrowpages#calendar',  :as => 'calendar'
 
-  resources :users, only: [:create, :show], path: '/login/user'
-
-  resource :session, only: [:create, :destroy]
-  get   '/session'        => 'sessions#index',  :as => 'session_index'
-  post  '/borrow/:type'   => 'sessions#borrow'
-  get   '/getevent/:type' => 'sessions#getevent'
-  post  '/delevent/:type' => 'sessions#delevent'
+  resources :users,   only: [:create, :show],           path: '/login/user'
+  resource  :session, only: [:index, :create, :destroy]
+  resource  :event,   only: [:show, :create, :destroy]
 
   post  '/login/token'    => 'sessions#token',  :as => 'token'
 

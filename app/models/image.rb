@@ -1,4 +1,7 @@
+# require 'carrierwave/orm/activerecord'
 class Image < ActiveRecord::Base
-	validates_presence_of :name, :hash
-	belongs_to :club_property
+	# belongs_to :club_property
+
+	# attr_accessible :storage
+	# mount_uploader :storage, ImageUploader
 end

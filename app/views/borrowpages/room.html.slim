@@ -26,6 +26,13 @@
 javascript:
 	$('##{action_name}-event-cancel').click(function(){
 		event_id = $('##{action_name}-event-id').text();
-		$.post("/delevent/#{action_name}",{"id": event_id});
+		$.ajax({
+			url: 'event',
+			type: 'DELETE',
+			data: {
+				"id": event_id,
+				"type": "#{action_name}"
+			}
+		});
 		$('#borrowpage#{action_name} #calendar').fullCalendar('removeEvents',event_id);
 	});

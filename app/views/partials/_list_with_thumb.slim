@@ -1,0 +1,26 @@
+ul data-role="listview" data-filter="true" data-split-theme="a" data-split-icon="check"
+	li data-role="list-divider" role="heading" 
+		| 項目
+		span.ui-li-aside 
+			= type == 'admin' ? "刪除" : "借用" # admin or borrow
+
+	- unless @property.blank?
+		- case type
+			- when 'admin'
+				- @property.each do |p|
+					li
+						a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
+							= image_tag p.image.thumbnail.url
+							h2 
+								=p.name
+						a.ui-icon-delete
+			- when 'borrow'
+				- @property.each do |p|
+					li 
+						a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
+							= image_tag p.image.thumbnail.url
+							h2 
+								=p.name
+							p 已經有 1 人借用
+							input.hide type="checkbox" name="borrow#{action_name}"
+						a.check-button

@@ -5,16 +5,7 @@ h3 =content_for(:title)
 
 =render 'partials/btn_float', :btn_link => "#popupNewItem-#{action_name}"
 
-ul data-role="listview" data-filter="true" data-split-theme="a" data-split-icon="check"
-	li data-role="list-divider" role="heading" 
-		| 項目
-		span.ui-li-aside 刪除
-	li 
-		a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
-			img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
-			h2 test
-			a.ui-icon-delete
-
+=render 'partials/list_with_thumb', :type => "admin"
 
 div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="pop"  data-history="false"
 	div style="padding:10px 20px;"
@@ -26,24 +17,34 @@ div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="p
 
 div.popupItem data-role="popup" id="popupNewItem-#{action_name}" data-transition="pop"  data-history="false"
 	div style="padding:10px 20px;"
-		= form_for :property ,:url => url_for(:controller => 'admin', :action => 'addproperty'), :remote => true, :id => 'addproperty_form' do |f|
+		= form_for(@property_form, remote: true, multipart: true, :id => 'addproperty_form') do |f|
 			.upload-preview
 				img
-			= f.label :name, "名稱"
-			= f.text_field :name, required: true, id: "input-name"
-			= f.label :picture, "圖片"
-			= f.file_field :picture, required: true, id: "input-picture"
-			= f.label :borrowable, "是否可借"
-			= f.check_box :borrowable, checked: true
+			.field
+				= f.label :name, "名稱"
+				= f.text_field :name, required: true, id: "input-name"
+				= f.label :image, "圖片"
+				= f.file_field :image, required: true, id: "input-image"
+				= f.label :borrowable, "是否可借"
+				= f.check_box :borrowable, checked: true
+				.radio
+					= f.label :type, "類型"
+					= f.label :type, "社書", :value => "book"
+					= f.radio_button :type, "book"
+					= f.label :type, "樂器", :value => "keyboard"
+					= f.radio_button :type, "keyboard", :checked => true
 			br
-			= f.submit "新增", :data => {:theme => "b", :rel => "back"}
-			a 	href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
+			.submit
+				div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
+					span 新增
+					input data-enhanced="true"	data-rel="back"  type="submit"/
+				a 	href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
 
 javascript:
 	$(document).on('pageshow', '#page-property',function(e, data) {
 		preview = $('.upload-preview img');
 
-		$('#input-picture').change(function(event){
+		$('#input-image').change(function(event){
 			input = $(event.currentTarget);
 			file = input[0].files[0];
 			reader = new FileReader();
@@ -65,4 +66,4 @@ sass:
 		i
 			color: #fff
 		.upload-preview img
-			max-width: 500px
+			max-width: 300px

@@ -29,6 +29,6 @@ class PagesController < ApplicationController
 
 	def letsencrypt
 	    # use your code here
-	    render text: ""
+	    render text: ENV["LETSENCRYPT"]
 	  end
 end

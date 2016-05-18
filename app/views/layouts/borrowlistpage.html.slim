@@ -4,17 +4,7 @@
 h2 =content_for(:title)
 
 form action=""
-	ul data-role="listview" data-filter="true" data-split-theme="a" data-split-icon="check"
-		li data-role="list-divider" role="heading" 
-			| 項目
-			span.ui-li-aside 借用
-		li 
-			a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
-				img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
-				h2 test
-				p 已經有 1 人借用
-				input.hide type="checkbox" name="borrow#{action_name}"
-				a.check-button
+	=render 'partials/list_with_thumb', :type => "borrow"
 	div.hide 
 		input id="submit-form-#{action_name}" type="submit" 
 
