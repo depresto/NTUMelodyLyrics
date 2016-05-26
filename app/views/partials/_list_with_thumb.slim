@@ -2,25 +2,25 @@ ul data-role="listview" data-filter="true" data-split-theme="a" data-split-icon=
 	li data-role="list-divider" role="heading" 
 		| 項目
 		span.ui-li-aside 
-			= type == 'admin' ? "刪除" : "借用" # admin or borrow
+			/admin or borrow page
+			= (type == 'admin') ? "刪除" : "借用" 
 
 	- unless @property.blank?
-		- case type
-			- when 'admin'
-				- @property.each do |p|
-					li
-						a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
-							= image_tag p.image.thumbnail.url
-							h2 
-								=p.name
-						a.ui-icon-delete
-			- when 'borrow'
-				- @property.each do |p|
-					li 
-						a href='#popupItem-#{action_name}'  data-rel="popup" data-position-to="window"
-							= image_tag p.image.thumbnail.url
-							h2 
-								=p.name
-							p 已經有 1 人借用
-							input.hide type="checkbox" name="borrow#{action_name}"
+		- @property.each do |p|
+			li id="property-#{p.id}" val="#{p.id}"
+				a.property_detail href='#popupItem-#{controller_name}-#{action_name}'  data-rel="popup" data-position-to="window"
+					= image_tag p.image.standard.url
+					h2 
+						=p.name
+					span.hide =p.image.full.url
+					- if type == 'borrow'
+						p 已經有 1 人借用
+						input.hide type="checkbox" name="borrow#{action_name}"
+				- case type
+					- when 'admin'
+						a.ui-icon-delete id="delete-button-#{p.id}" href="#popupDeleteItem-#{controller_name}-#{action_name}" data-rel="popup" data-position-to="window"
+						span id="delete-#{p.id}"
+							= link_to('', url_for( action: :destroy ,id: p.id), method: :delete, class: 'ui-icon-delete hidden')
+					- when 'borrow'
 						a.check-button
+							

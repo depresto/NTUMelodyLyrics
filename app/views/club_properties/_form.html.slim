@@ -1,0 +1,21 @@
+= form_for(@property_form, remote: true, multipart: true, :id => 'addproperty_form') do |f|
+	.upload-preview
+		img
+	.field
+		= f.label :name, "名稱"
+		= f.text_field :name, required: true, id: "input-name"
+		= f.label :image, "圖片"
+		= f.file_field :image, required: true, id: "input-image"
+		= f.label :borrowable, "是否可借"
+		= f.check_box :borrowable, checked: true
+		.radio
+			= f.label :type, "類型"
+			= f.label :type, "社書", :value => "book"
+			= f.radio_button :type, "book"
+			= f.label :type, "樂器", :value => "keyboard"
+			= f.radio_button :type, "keyboard", :checked => true
+	br
+	.submit
+		div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
+			span 新增
+			input data-enhanced="true"	data-rel="back"  type="submit"/

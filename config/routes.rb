@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   # get :init, :login, :main, controller: :pages
   scope 'admin' do
     get '/adduser'      => 'admin#adduser',     :as => 'adduser'
-    resources :club_properties, only: [:index, :create, :update, :destroy]
+    resources :club_properties, only: [:index, :show, :create, :update, :destroy]
   end
 
   scope '/borrow' do

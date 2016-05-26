@@ -3,67 +3,21 @@
 
 h3 =content_for(:title)
 
-=render 'partials/btn_float', :btn_link => "#popupNewItem-#{action_name}"
+=render 'partials/btn_float', :btn_link => "#popupNewItem-property"
 
 =render 'partials/list_with_thumb', :type => "admin"
 
-div.popupItem data-role="popup" id="popupItem-#{action_name}" data-transition="pop"  data-history="false"
-	div style="padding:10px 20px;"
-		h2 	id="#{action_name}-dialog-name" test
-		img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
-		p 	id="#{action_name}-dialog-discription" 這是社產
+= popup_item "popupItem-#{controller_name}-#{action_name}", "詳細資料" do
+	h2 	id="property-dialog-name"
+	img id="property-dialog-image" src=""
+	/p 	id="property-dialog-discription" 這是社產
 
-		a 	href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
+	a id="edit-property-detail" data-role="button" data-theme="b" href="#" 編輯
 
-div.popupItem data-role="popup" id="popupNewItem-#{action_name}" data-transition="pop"  data-history="false"
-	div style="padding:10px 20px;"
-		= form_for(@property_form, remote: true, multipart: true, :id => 'addproperty_form') do |f|
-			.upload-preview
-				img
-			.field
-				= f.label :name, "名稱"
-				= f.text_field :name, required: true, id: "input-name"
-				= f.label :image, "圖片"
-				= f.file_field :image, required: true, id: "input-image"
-				= f.label :borrowable, "是否可借"
-				= f.check_box :borrowable, checked: true
-				.radio
-					= f.label :type, "類型"
-					= f.label :type, "社書", :value => "book"
-					= f.radio_button :type, "book"
-					= f.label :type, "樂器", :value => "keyboard"
-					= f.radio_button :type, "keyboard", :checked => true
-			br
-			.submit
-				div class="ui-input-btn ui-corner-all ui-btn ui-btn-b"
-					span 新增
-					input data-enhanced="true"	data-rel="back"  type="submit"/
-				a 	href="#" class="ui-btn ui-corner-all ui-shadow" date-role="button" data-rel="back" 返回
+= popup_item "popupNewItem-property", "詳細資訊" do
+	=render 'form'
 
-javascript:
-	$(document).on('pageshow', '#page-property',function(e, data) {
-		preview = $('.upload-preview img');
+= popup_item "popupDeleteItem-#{controller_name}-#{action_name}", "確認刪除" do
+	h3 確定要刪除？
+	a id="delete_property" data-role="button" data-theme="b" data-rel="back" href="#" val="" 確定
 
-		$('#input-image').change(function(event){
-			input = $(event.currentTarget);
-			file = input[0].files[0];
-			reader = new FileReader();
-			reader.onload = function(e){
-		    	image_base64 = e.target.result;
-		    	preview.attr("src", image_base64);
-			};
-			reader.readAsDataURL(file);
-		});
-
-	});
-
-	$('#addproperty_form').on('ajax:success', function(e, data, status, xhr){
-		console.log(status);
-	});
-
-sass:
-	#page-property
-		i
-			color: #fff
-		.upload-preview img
-			max-width: 300px

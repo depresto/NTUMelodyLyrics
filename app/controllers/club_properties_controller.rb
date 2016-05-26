@@ -1,10 +1,13 @@
 class ClubPropertiesController < ApplicationController
-	before_action :set_image, only: [:edit, :update, :destroy]
+	before_action :set_club_property, only: [:edit, :update, :destroy]
 
 	def index
 		# @property 		= Image.select('"club_properties"."id", "club_properties"."name", "storage", "type"').joins('INNER JOIN "club_properties" ON "images"."id" = "club_properties"."image_id"')
 		@property 		= ClubProperty.all
 		@property_form 	= ClubProperty.new
+	end
+
+	def show
 	end
 
 	def create
@@ -22,7 +25,7 @@ class ClubPropertiesController < ApplicationController
 		# i.save!
 
 		# Save to Properties
-		case param[:type]
+		case params[:club_property][:type]
 	    	when 'keyboard' then c = BorrowKeyboard.new(club_property_params)
 	    	when 'book'     then c = BorrowBook.new(club_property_params)
 	    end
