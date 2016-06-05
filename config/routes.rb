@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   get   '/calendar'       => 'borrowpages#calendar',  :as => 'calendar'
 
+  resources :borrow_lists,  only: [:create, :destroy]
   resources :users,   only: [:create, :show],           path: '/login/user'
   resource  :session, only: [:index, :create, :destroy]
   resource  :event,   only: [:show, :create, :destroy]

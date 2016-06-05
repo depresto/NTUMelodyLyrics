@@ -9,32 +9,13 @@ form action=""
 		input id="submit-form-#{action_name}" type="submit" 
 
 = popup_item "popupItem-#{controller_name}-#{action_name}", "詳細資訊" do
-	h2 	id="#{action_name}-dialog-name" test
-	img src="http://static.nownews.com/newspic/1659/i1659746.jpg"
-	p 	id="#{action_name}-dialog-discription" 這是社產
+	h2 	id="borrowpage-dialog-name" 
+	img id="borrowpage-dialog-image" src="http://static.nownews.com/newspic/1659/i1659746.jpg"
+	/ p 	id="borrowpage-dialog-discription" 這是社產
+
+	=link_to "借用","", "data-role": "button", "data-theme": "b"
 
 = content_for :footer
 	div data-role="footer" data-position="fixed" data-theme="a"
 		div.ui-grid-b
 			a href="#" data-role="button" data-theme="b" onclick="$('#submit-form-#{action_name}').click();" 預約
-
-javascript:
-	$(document).on('pageshow', '#borrowlist#{action_name}', function(e, data){
-
-		$('.check-button').click(function() {
-			checkbox = $(this).siblings('.ui-btn').children('.ui-checkbox').children('input');
-			if (!checkbox.prop('checked')) {
-				$(this).buttonMarkup({theme: 'b'});
-				$(this).find('span.ui-btn').buttonMarkup({
-					theme: 'b'
-				});
-				checkbox.prop('checked',true);
-			} else {
-				$(this).buttonMarkup({theme: 'a'});
-				$(this).find('span.ui-btn').buttonMarkup({
-					theme: 'a'
-				});
-				checkbox.prop('checked',false);
-			}
-		});
-	});

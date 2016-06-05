@@ -32,36 +32,3 @@ div data-role="popup" id="popupEvent-#{action_name}" data-transition="pop"  data
 		span.hide id="#{action_name}-event-id"
 script
 	=render :partial => 'layouts/borrowpage.js.erb'
-
-sass:
-	.borrowpage
-		h2
-			text-align: center
-			line-height: 1em	
-		i
-			color: #fff
-		.ui-grid-a
-			width: 90%
-		.ui-input-text
-			width: 200px
-			box-shadow: none
-			border-width: 0px
-			border-radius: 0
-			border-bottom-width: 1px
-		div.fc-row.fc-widget-header
-	  		border-bottom: 1px solid #aaa
-	  	.fc-unthemed td
-	  		border-color: #eee
-	  	.fc-axis
-	  		border-right: 1px solid #aaa !important
-		.fc-left h2
-			margin: 7px 0
-			padding-left: 10px
-			font-size: 16px
-			font-weight: 500
-		div.fc-time, div.fc-title, span.fc-time, span.fc-title
-			color: #fff
-			text-shadow: none
-			font-weight: 300
-		.dialog-event-time
-			font-size: 14px

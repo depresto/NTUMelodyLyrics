@@ -5,11 +5,12 @@ class BorrowpagesController < ApplicationController
 	end
 
 	def book
-		@property = BorrowBook.all
+		@property = BorrowBook.includes(:borrow_list).all
 	end
 
 	def keyboard
-		@property = BorrowKeyboard.all
+		@property = BorrowKeyboard.includes(:borrow_list).all
+		logger.debug @property.to_json
 	end
 
 	def calendar

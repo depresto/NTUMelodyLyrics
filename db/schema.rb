@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160518172713) do
+ActiveRecord::Schema.define(version: 20160605165139) do
 
   create_table "borrow_lists", force: :cascade do |t|
     t.string   "club_property_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160518172713) do
     t.date     "deadline"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.date     "startdate"
   end
 
   create_table "calendars", force: :cascade do |t|

@@ -1,0 +1,9 @@
+= form_for @borrow_list do |f|
+  - if @borrow_list.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@borrow_list.errors.count, "error")} prohibited this borrow_list from being saved:"
+      ul
+        - @borrow_list.errors.full_messages.each do |message|
+          li = message
+
+  .actions = f.submit

@@ -2,6 +2,7 @@ $(document).on('pageshow', '#page-property',function(e, data) {
 	preview = $('.upload-preview img');
 	click_id = null;
 
+	// upload image preview
 	$('#input-image').change(function(event){
 		input = $(event.currentTarget);
 		file = input[0].files[0];
@@ -13,6 +14,7 @@ $(document).on('pageshow', '#page-property',function(e, data) {
 		reader.readAsDataURL(file);
 	});
 
+	// Property detail button
 	$('.property_detail').on('click', function(){
 		// click_id 	= $(this).parent().attr('val');
 		name 		= $(this).children('h2').text();
@@ -22,10 +24,12 @@ $(document).on('pageshow', '#page-property',function(e, data) {
 		$("#property-dialog-image").attr("src", image_url);
 	});
 
+	// Delete property icon button
 	$('.ui-icon-delete').on('click', function(){
 		click_id = $(this).parent().attr('val');
 	})
 
+	// Delete property button in detail dialog
 	$('#delete_roperty').click(function(){
 		$('#delete-'+click_id).children('a').click();
 	});

@@ -3,9 +3,11 @@ class User < ActiveRecord::Base
 	alias_attribute :username, :s_id
 	# 關聯式資料
 	has_many :login_tokens, dependent: :destroy
+	has_many :borrow_list, 	dependent: :destroy
+	
 	# 學號與姓名不可為空
-	validates :s_id, uniqueness: true, presence: true
-	validates :password, presence: true
+	validates :s_id, 		uniqueness: true, presence: true
+	validates :password, 	presence: 	true
 	before_save :encrypt_password
 
 	def encrypt_password
